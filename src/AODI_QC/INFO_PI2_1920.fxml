@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="Root" minWidth="800.0" prefHeight="1200.0" prefWidth="1920.0" styleClass="background" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="AODI_INFO.INFOController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <Label layoutX="682.0" layoutY="16.0" prefWidth="556.0" text="奥蒂电控作业指导终端">
+      <font>
+        <Font name="STKaiti" size="55.0" />
+      </font>
+      <textFill>
+        <Color blue="0.749" green="0.749" red="0.749" fx:id="x4" />
+      </textFill>
+    </Label>
+    <ImageView fx:id="App_Exit" fitHeight="48.0" fitWidth="48.0" layoutX="1858.0" layoutY="14.0" onMouseClicked="#AppExit_Pro" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@error.png" />
+      </image>
+    </ImageView>
+    <AnchorPane layoutX="15.0" layoutY="98.0" minHeight="110.0" minWidth="786.0" prefHeight="1015.0" prefWidth="1891.0">
+      <children>
+        <AnchorPane layoutX="0.0" layoutY="0.0" prefHeight="1015.0" prefWidth="1161.0">
+          <children>
+            <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#ff7a00" height="1013.0" layoutX="1.0" layoutY="2.0" opacity="0.65" stroke="BLACK" strokeType="OUTSIDE" width="1159.0">
+              <effect>
+                <Lighting diffuseConstant="0.9047619047619048" specularConstant="0.22063492063492063" specularExponent="14.603174603174605" surfaceScale="6.261904761904762">
+                  <bumpInput>
+                    <Shadow />
+                  </bumpInput>
+                  <light>
+                    <javafx.scene.effect.Light.Distant azimuth="90.0" elevation="70.0">
+                      <color>
+                        <Color blue="0.800" green="1.000" red="0.914" fx:id="x3" />
+                      </color>
+                    </javafx.scene.effect.Light.Distant>
+                  </light>
+                </Lighting>
+              </effect>
+            </Rectangle>
+            <Label layoutX="10.0" layoutY="10.0" prefWidth="1137.0" text="充电机-3.5KW-PCB板装配作业指导">
+              <font>
+                <Font name="STKaiti" size="40.0" fx:id="x5" />
+              </font>
+              <textFill>
+                <Color blue="0.125" green="0.125" red="0.125" fx:id="x2" />
+              </textFill>
+            </Label>
+            <Label alignment="CENTER_RIGHT" contentDisplay="LEFT" layoutX="918.0" layoutY="958.0" prefWidth="217.0" text="第1页/总5页" textAlignment="JUSTIFY" textFill="$x2">
+              <font>
+                <Font name="STKaiti" size="35.0" />
+              </font>
+            </Label>
+            <ImageView id="App_Exit" fitHeight="728.5855102539062" fitWidth="1054.7142687126627" layoutX="53.0" layoutY="77.0" onMouseClicked="#AppExit_Pro" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@device1.jpg" />
+              </image>
+            </ImageView>
+            <TextArea layoutX="53.0" layoutY="824.0" opacity="0.21" prefHeight="113.0" prefWidth="1054.7142333984375" text="安装流程：&#10;1.根据用户要求，装配的位置点如图所示。&#10;2.安装后屏幕必须擦净。" wrapText="true" />
+          </children>
+        </AnchorPane>
+        <AnchorPane layoutX="1161.0" layoutY="0.0" minWidth="252.0" prefHeight="1015.0" prefWidth="729.0">
+          <children>
+            <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#33ffb6" height="1013.0" layoutX="1.0" layoutY="2.0" opacity="0.65" stroke="BLACK" strokeMiterLimit="10.0" strokeType="OUTSIDE" width="727.0">
+              <effect>
+                <Lighting diffuseConstant="0.9047619047619048" specularConstant="0.22063492063492063" specularExponent="14.603174603174605" surfaceScale="6.261904761904762">
+                  <bumpInput>
+                    <Shadow />
+                  </bumpInput>
+                  <light>
+                    <javafx.scene.effect.Light.Distant azimuth="90.0" color="$x3" elevation="70.0" />
+                  </light>
+                </Lighting>
+              </effect>
+            </Rectangle>
+            <Label layoutX="90.0" layoutY="47.0" prefWidth="165.0" text="工位号:" textFill="BLACK">
+              <font>
+                <Font name="STKaiti" size="50.0" fx:id="x1" />
+              </font>
+            </Label>
+            <TextField id="T33" alignment="CENTER" editable="true" layoutX="267.0" layoutY="47.0" prefHeight="66.0" prefWidth="398.0" text="12" />
+            <Separator layoutX="38.0" layoutY="442.0" mouseTransparent="false" orientation="HORIZONTAL" pickOnBounds="false" prefHeight="16.0" prefWidth="659.0" valignment="CENTER">
+              <effect>
+                <Lighting>
+                  <bumpInput>
+                    <Shadow />
+                  </bumpInput>
+                  <light>
+                    <javafx.scene.effect.Light.Distant color="BLACK" />
+                  </light>
+                </Lighting>
+              </effect>
+            </Separator>
+            <ImageView id="App_Exit" fitHeight="86.0" fitWidth="86.0" layoutX="602.0" layoutY="902.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@setting.png" />
+              </image>
+            </ImageView>
+            <Button id="Button_Load" layoutX="102.0" layoutY="909.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="165.0" text="确定" />
+            <Button id="Button_Load" layoutX="336.0" layoutY="909.0" minHeight="16.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="165.0" text="取消" />
+            <Label font="$x1" layoutX="38.0" layoutY="152.0" prefWidth="217.0" text="产品客户:" textFill="BLACK" />
+            <TextField id="T22" alignment="CENTER" editable="true" layoutX="267.0" layoutY="152.0" prefHeight="66.0" prefWidth="398.0" text="浙江大学" />
+            <Label font="$x1" layoutX="38.0" layoutY="253.0" prefWidth="217.0" text="产品批次:" textFill="BLACK" />
+            <TextField id="T22" alignment="CENTER" editable="true" layoutX="267.0" layoutY="253.0" prefHeight="66.0" prefWidth="398.0" text="123123" />
+            <Label font="$x1" layoutX="38.0" layoutY="351.0" prefWidth="217.0" text="今日产量:" textFill="BLACK" />
+            <TextField id="T44" alignment="CENTER" editable="true" layoutX="267.0" layoutY="351.0" prefHeight="66.0" prefWidth="398.0" text="100" />
+            <Label font="$x1" layoutX="137.0" layoutY="477.0" prefWidth="119.0" text="工号:" textFill="BLACK" />
+            <TextField id="T33" alignment="CENTER" editable="true" layoutX="268.0" layoutY="477.0" prefHeight="66.0" prefWidth="398.0" text="4567" />
+            <Label font="$x1" layoutX="39.0" layoutY="578.0" prefWidth="217.0" text="当前状态:" textFill="BLACK" />
+            <TextField id="T22" alignment="CENTER" editable="true" layoutX="267.0" layoutY="578.0" prefHeight="66.0" prefWidth="398.0" text="浙江大学" />
+            <Label font="$x1" layoutX="38.0" layoutY="680.0" prefWidth="217.0" text="已完成量:" textFill="BLACK" />
+            <TextField id="T22" alignment="CENTER" editable="true" layoutX="267.0" layoutY="680.0" prefHeight="66.0" prefWidth="398.0" text="6" />
+            <Label font="$x1" layoutX="38.0" layoutY="781.0" prefWidth="217.0" text="完成扫码:" textFill="BLACK" />
+            <TextField id="T44" alignment="CENTER" editable="true" layoutX="267.0" layoutY="779.0" prefHeight="66.0" prefWidth="398.0" text="3423124" />
+          </children>
+        </AnchorPane>
+      </children>
+    </AnchorPane>
+    <ImageView id="App_Exit" fitHeight="48.0" fitWidth="48.0" layoutX="1858.0" layoutY="1138.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@statusbar_message_light_orange.png" />
+      </image>
+    </ImageView>
+    <Label id="Label_Time" fx:id="System_Time" alignment="TOP_LEFT" font="$x5" layoutX="7.0" layoutY="1138.0" prefWidth="648.0" text="时间:2016年1月13日 12:45:23" textFill="$x4" />
+  </children>
+  <stylesheets>
+    <URL value="@Servo.css" />
+  </stylesheets>
+</AnchorPane>

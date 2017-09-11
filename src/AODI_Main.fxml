@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" styleClass="background" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="MainController_New">
+  <children>
+    <ImageView fx:id="Meter_BackupImage" fitHeight="259.0" fitWidth="257.0" layoutX="144.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@speedometer.png" />
+      </image>
+    </ImageView>
+    <Label fx:id="Meter_DisplayValue" alignment="CENTER" layoutX="243.0" layoutY="286.0" prefHeight="15.0" prefWidth="58.0" text="12.45">
+      <font>
+        <Font size="12.0" fx:id="x1" />
+      </font>
+      <textFill>
+        <Color blue="0.000" green="1.000" red="0.322" fx:id="x2" />
+      </textFill>
+    </Label>
+    <Label fx:id="Meter_DisplayUnit" alignment="CENTER" font="$x1" layoutX="243.0" layoutY="262.0" prefHeight="15.0" prefWidth="58.0" text="V" textFill="$x2" />
+    <Label layoutX="168.0" layoutY="431.0" prefHeight="24.0" prefWidth="58.0" text="串口号:" textFill="GREY">
+      <font>
+        <Font size="16.0" fx:id="x3" />
+      </font>
+    </Label>
+    <Label font="$x3" layoutX="168.0" layoutY="475.0" prefHeight="24.0" prefWidth="58.0" text="波特率:" textFill="GREY" />
+    <Button fx:id="Serise_Open" layoutX="191.0" layoutY="525.0" mnemonicParsing="false" onAction="#Button_Open_Handle" text="打开" />
+    <Button fx:id="Serise_Close" layoutX="261.0" layoutY="525.0" mnemonicParsing="false" onAction="#Button_Close_Handle" text="关闭" />
+    <Label font="$x3" layoutX="347.0" layoutY="384.0" prefHeight="24.0" prefWidth="40.0" text="接收:" textFill="GREY" />
+    <TextField fx:id="Serise_Receive_Bytes" alignment="CENTER" layoutX="387.0" layoutY="383.0" prefWidth="111.0" text="0" />
+    <ChoiceBox fx:id="Serise_Port" layoutX="235.0" layoutY="434.0" prefWidth="75.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="项 1" />
+          <String fx:value="项 2" />
+          <String fx:value="项 3" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <ChoiceBox id="Serise_B" fx:id="Serise_Bound" layoutX="235.0" layoutY="478.0" prefWidth="75.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="项 1" />
+          <String fx:value="项 2" />
+          <String fx:value="项 3" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <ImageView fx:id="Switch1" fitHeight="32.386138916015625" fitWidth="105.51612949732564" layoutX="155.0" layoutY="596.0" onMouseClicked="#Switch_Action" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@switch1_off.png" />
+      </image>
+    </ImageView>
+    <ImageView fx:id="Switch2" fitHeight="39.15377798549831" fitWidth="105.51611328125" layoutX="301.0" layoutY="593.0" onMouseClicked="#Switch_Action" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@switch2_off.png" />
+      </image>
+    </ImageView>
+    <TextArea fx:id="Serise_Receive_datas" layoutX="533.0" layoutY="43.0" prefHeight="695.0" prefWidth="457.0" wrapText="true" />
+  </children>
+  <stylesheets>
+    <URL value="@AODI.css" />
+  </stylesheets>
+</AnchorPane>

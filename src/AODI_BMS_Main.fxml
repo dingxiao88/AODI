@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" styleClass="background" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="LoginController1">
+  <children>
+    <Separator id="T6" layoutX="870.0" layoutY="706.0" opacity="0.56" orientation="VERTICAL" prefHeight="62.0" />
+    <Separator id="T6" layoutX="0.0" layoutY="703.0" prefWidth="1024.0" />
+    <LineChart fx:id="Chart" alternativeColumnFillVisible="false" alternativeRowFillVisible="true" animated="false" createSymbols="true" horizontalGridLinesVisible="true" horizontalZeroLineVisible="true" layoutX="222.0" layoutY="230.0" legendVisible="false" prefHeight="298.0" prefWidth="721.9999000000025" title="" verticalGridLinesVisible="true" verticalZeroLineVisible="true">
+      <xAxis>
+        <NumberAxis id="Rec_Axis_X" fx:id="Chart_Axis_X" animated="false" autoRanging="false" forceZeroInRange="false" label="" minorTickCount="10" minorTickVisible="true" prefWidth="526.0" side="BOTTOM" tickLabelFill="RED" tickLabelsVisible="true" tickLength="2.0" tickMarkVisible="true" tickUnit="50.0" upperBound="400.0" />
+      </xAxis>
+      <yAxis>
+        <NumberAxis id="Rec_Axis_Y" fx:id="Chart_Axis_Y" animated="false" autoRanging="true" forceZeroInRange="true" label="" lowerBound="0.0" minorTickVisible="false" side="LEFT" tickLabelFill="RED" tickLabelsVisible="true" tickLength="2.0" tickMarkVisible="true" tickUnit="30.0" upperBound="360.0" />
+      </yAxis>
+    </LineChart>
+    <ImageView fitHeight="110.0" fitWidth="1024.0" layoutX="0.0" layoutY="0.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@titel1.png" />
+      </image>
+    </ImageView>
+    <Label alignment="CENTER" layoutX="355.0" layoutY="34.0" prefWidth="390.0" text="电子负载控制系统" textAlignment="CENTER" textFill="BLACK">
+      <font>
+        <Font name="STHupo" size="40.0" />
+      </font>
+    </Label>
+    <Label id="" fx:id="System_Time" alignment="CENTER_RIGHT" layoutX="723.0" layoutY="85.0" prefHeight="24.0" prefWidth="293.0" text="2014/10/23  19:56:34" textAlignment="RIGHT" textFill="BLACK">
+      <font>
+        <Font name="FZYaoTi" size="20.0" />
+      </font>
+    </Label>
+    <ImageView fitHeight="73.0" fitWidth="91.33990485249679" layoutX="293.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" visible="true">
+      <image>
+        <Image url="@BMS.png" />
+      </image>
+    </ImageView>
+    <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="128.0">
+      <children>
+        <Rectangle fx:id="Charging_RunTime_Rect" arcHeight="30.0" arcWidth="30.0" fill="#00ced5" height="110.0" layoutX="2.0" layoutY="1.0" stroke="BLACK" strokeLineCap="SQUARE" strokeLineJoin="MITER" strokeType="OUTSIDE" width="215.10052490234375" />
+        <Label layoutX="16.0" layoutY="13.0" text="已充电时间" textFill="BLACK">
+          <font>
+            <Font name="STHupo" size="18.0" fx:id="x1" />
+          </font>
+        </Label>
+        <Label fx:id="Charging_RunTime" alignment="CENTER" layoutX="1.0" layoutY="42.0" prefHeight="35.0" prefWidth="217.10052490234375" text="00:00:00" textAlignment="CENTER" textFill="BLACK">
+          <font>
+            <Font size="40.0" fx:id="x2" />
+          </font>
+        </Label>
+      </children>
+    </AnchorPane>
+    <AnchorPane id="AnchorPane" layoutX="263.0" layoutY="127.0">
+      <children>
+        <Rectangle fx:id="Charging_InputVoltage_Rect" arcHeight="20.0" arcWidth="20.0" fill="#df4c14" height="110.0" layoutX="1.0" layoutY="1.0" stroke="BLACK" strokeLineCap="SQUARE" strokeLineJoin="MITER" strokeType="OUTSIDE" width="185.0" />
+        <Label font="$x1" layoutX="16.0" layoutY="13.0" text="输出电压" textFill="BLACK" />
+        <Label id="Charging_InputCurrent" fx:id="Charging_OutputVoltage" alignment="CENTER" font="$x2" layoutX="0.0" layoutY="42.0" prefHeight="68.0" prefWidth="186.0" text="----" textAlignment="CENTER" textFill="BLACK" />
+        <CheckBox id="Charging_InputVoltageCurve_Sel" fx:id="Charging_OutputVoltageCurve_Sel" layoutX="136.0" layoutY="13.0" mnemonicParsing="false" onAction="#Button_Pro" selected="true" text="曲线" />
+        <Label id="Charging_Temperature" fx:id="Charging_OutputVoltage_UpLimit" alignment="CENTER" layoutX="86.0" layoutY="2.0" minHeight="24.0" prefHeight="24.0" prefWidth="32.0" text="UP" textAlignment="CENTER">
+          <font>
+            <Font size="10.0" fx:id="x9" />
+          </font>
+          <textFill>
+            <Color blue="0.750" green="0.750" red="0.750" fx:id="x3" />
+          </textFill>
+        </Label>
+        <Label id="Charging_Temperature" fx:id="Charging_OutputVoltage_DownLimit" alignment="CENTER" font="$x9" layoutX="92.0" layoutY="14.0" minHeight="24.0" prefHeight="24.0" prefWidth="37.0" text="DOWN" textAlignment="CENTER" textFill="$x3" />
+        <Label id="Charging_Temperature" fx:id="Charging_OutputVoltage_MAX" alignment="CENTER" font="$x9" layoutX="16.0" layoutY="30.0" minHeight="24.0" prefHeight="24.0" prefWidth="80.0" text="MAX:----" textAlignment="CENTER" textFill="BLACK" />
+        <Label id="Charging_Temperature" fx:id="Charging_OutputVoltage_MIN" alignment="CENTER" font="$x9" layoutX="99.0" layoutY="30.0" minHeight="24.0" prefHeight="24.0" prefWidth="80.0" text="MIN:---" textAlignment="CENTER" textFill="BLACK" />
+      </children>
+    </AnchorPane>
+    <AnchorPane id="AnchorPane" layoutX="451.0" layoutY="129.0">
+      <children>
+        <Rectangle fx:id="Charging_InputCurrent_Rect" arcHeight="20.0" arcWidth="20.0" fill="#83b83d" height="110.0" layoutX="0.0" layoutY="-1.0" stroke="BLACK" strokeLineCap="SQUARE" strokeLineJoin="MITER" strokeType="OUTSIDE" width="185.0" />
+        <Label font="$x1" layoutX="16.0" layoutY="13.0" text="输出电流" textFill="BLACK" />
+        <Label id="Charging_InputVoltage" fx:id="Charging_OutputCurrent" alignment="CENTER" font="$x2" layoutX="0.0" layoutY="42.0" prefHeight="68.0" prefWidth="186.0" text="----" textAlignment="CENTER" textFill="BLACK" />
+        <CheckBox id="Charging_InputCurrentCurve_Sel" fx:id="Charging_OutputCurrentCurve_Sel" layoutX="136.0" layoutY="13.0" mnemonicParsing="false" onAction="#Button_Pro" selected="true" text="曲线" />
+        <Label id="Charging_Temperature" fx:id="Charging_OutputCurrent_UpLimit" alignment="CENTER" font="$x9" layoutX="86.0" layoutY="2.0" minHeight="24.0" prefHeight="24.0" prefWidth="32.0" text="UP" textAlignment="CENTER" textFill="$x3" />
+        <Label id="Charging_Temperature" fx:id="Charging_OutputCurrent_DownLimit" alignment="CENTER" font="$x9" layoutX="92.0" layoutY="14.0" minHeight="24.0" prefHeight="24.0" prefWidth="37.0" text="DOWN" textAlignment="CENTER" textFill="$x3" />
+        <Label id="Charging_Temperature" fx:id="Charging_OutputCurrent_MAX" alignment="CENTER" font="$x9" layoutX="16.0" layoutY="30.0" minHeight="24.0" prefHeight="24.0" prefWidth="80.0" text="MAX:----" textAlignment="CENTER" textFill="BLACK" />
+        <Label id="Charging_Temperature" fx:id="Charging_OutputCurrent_MIN" alignment="CENTER" font="$x9" layoutX="99.0" layoutY="30.0" minHeight="24.0" prefHeight="24.0" prefWidth="80.0" text="MIN:----" textAlignment="CENTER" textFill="BLACK" />
+      </children>
+    </AnchorPane>
+    <AnchorPane id="AnchorPane" layoutX="637.0" layoutY="127.0">
+      <children>
+        <Rectangle fx:id="Charging_MainVoltage_Rect" arcHeight="20.0" arcWidth="20.0" fill="#ff9300" height="110.0" layoutX="1.0" layoutY="1.0" stroke="BLACK" strokeLineCap="SQUARE" strokeLineJoin="MITER" strokeType="OUTSIDE" width="185.0" />
+        <Label font="$x1" layoutX="16.0" layoutY="13.0" text="母线电压" textFill="BLACK" />
+        <Label fx:id="Charging_MainVoltage" alignment="CENTER" font="$x2" layoutX="0.0" layoutY="42.0" prefHeight="68.0" prefWidth="186.0" text="----" textAlignment="CENTER" textFill="BLACK" />
+        <CheckBox fx:id="Charging_MainVoltageCurve_Sel" layoutX="136.0" layoutY="13.0" mnemonicParsing="false" onAction="#Button_Pro" selected="true" text="曲线" />
+        <Label id="Charging_Temperature" fx:id="Charging_MainVoltage_UpLimit" alignment="CENTER" font="$x9" layoutX="86.0" layoutY="2.0" minHeight="24.0" prefHeight="24.0" prefWidth="32.0" text="UP" textAlignment="CENTER" textFill="$x3" />
+        <Label id="Charging_Temperature" fx:id="Charging_MainVoltage_DownLimit" alignment="CENTER" font="$x9" layoutX="92.0" layoutY="14.0" minHeight="24.0" prefHeight="24.0" prefWidth="37.0" text="DOWN" textAlignment="CENTER" textFill="$x3" />
+        <Label id="Charging_Temperature" fx:id="Charging_MainVoltage_MAX" alignment="CENTER" font="$x9" layoutX="16.0" layoutY="30.0" minHeight="24.0" prefHeight="24.0" prefWidth="80.0" text="MAX:----" textAlignment="CENTER" textFill="BLACK" />
+        <Label id="Charging_Temperature" fx:id="Charging_MainVoltage_MIN" alignment="CENTER" font="$x9" layoutX="99.0" layoutY="30.0" minHeight="24.0" prefHeight="24.0" prefWidth="80.0" text="MIN:----" textAlignment="CENTER" textFill="BLACK" />
+      </children>
+    </AnchorPane>
+    <AnchorPane id="AnchorPane" layoutX="824.0" layoutY="127.0">
+      <children>
+        <Rectangle fx:id="Charging_Temperature_Rect" arcHeight="20.0" arcWidth="20.0" fill="#a5a770" height="110.0" layoutX="1.0" layoutY="1.0" stroke="BLACK" strokeLineCap="SQUARE" strokeLineJoin="MITER" strokeType="OUTSIDE" width="185.0" />
+        <Label font="$x1" layoutX="16.0" layoutY="13.0" text="检测温度" textFill="BLACK" />
+        <Label fx:id="Charging_Temperature" alignment="CENTER" font="$x2" layoutX="0.0" layoutY="42.0" minHeight="47.0" prefHeight="68.0" prefWidth="186.0" text="----" textAlignment="CENTER" textFill="BLACK" />
+        <CheckBox fx:id="Charging_TemperatureCurve_Sel" layoutX="136.0" layoutY="13.0" mnemonicParsing="false" onAction="#Button_Pro" selected="true" text="曲线" />
+        <Label id="Charging_Temperature" fx:id="Charging_Temperature_UpLimit" alignment="CENTER" font="$x9" layoutX="86.0" layoutY="2.0" minHeight="24.0" prefHeight="24.0" prefWidth="32.0" text="UP" textAlignment="CENTER" textFill="$x3" />
+        <Label id="Charging_Temperature" fx:id="Charging_Temperature_DownLimit" alignment="CENTER" font="$x9" layoutX="92.0" layoutY="14.0" minHeight="24.0" prefHeight="24.0" prefWidth="37.0" text="DOWN" textAlignment="CENTER" textFill="$x3" />
+        <Label id="Charging_Temperature" fx:id="Charging_Temperature_MAX" alignment="CENTER" font="$x9" layoutX="16.0" layoutY="30.0" minHeight="24.0" prefHeight="24.0" prefWidth="80.0" text="MAX:----" textAlignment="CENTER" textFill="BLACK" />
+        <Label id="Charging_Temperature" fx:id="Charging_Temperature_MIN" alignment="CENTER" font="$x9" layoutX="99.0" layoutY="30.0" minHeight="24.0" prefHeight="24.0" prefWidth="80.0" text="MIN:----" textAlignment="CENTER" textFill="BLACK" />
+      </children>
+    </AnchorPane>
+    <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#008dd5" height="227.0" layoutX="945.0" layoutY="269.0" stroke="BLACK" strokeType="OUTSIDE" width="65.0000228881836" />
+    <GridPane gridLinesVisible="false" hgap="2.0" layoutX="10.0" layoutY="715.0" prefHeight="47.0" prefWidth="850.0" vgap="2.0">
+      <children>
+        <Label id="T33" fx:id="SystemError_OutputVoltage_Over" alignment="CENTER" minHeight="10.9998779296875" prefHeight="35.000099999997474" prefWidth="95.00009999999747" styleClass="background" text="输出电压过压" textFill="BLACK" GridPane.columnIndex="0" GridPane.rowIndex="0">
+          <font>
+            <Font size="14.0" fx:id="x8" />
+          </font>
+        </Label>
+        <Label id="T33" fx:id="SystemError_OutputVoltage_Under" alignment="CENTER" font="$x8" minHeight="10.9998779296875" prefHeight="35.000099999997474" prefWidth="95.00009999999747" styleClass="background" text="输出电压欠压" textFill="BLACK" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label id="T33" fx:id="SystemError_OutputCurrent_Over" alignment="CENTER" font="$x8" minHeight="10.9998779296875" prefHeight="35.000099999997474" prefWidth="95.00009999999747" styleClass="background" text="输出电流过流" textFill="BLACK" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+        <Label id="T33" fx:id="SystemError_OutputCurrent_Under" alignment="CENTER" font="$x8" minHeight="10.9998779296875" prefHeight="35.000099999997474" prefWidth="95.00009999999747" styleClass="background" text="输出电流过低" textFill="BLACK" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+        <Label id="T33" fx:id="SystemError_MainVoltage_Over" alignment="CENTER" font="$x8" minHeight="10.9998779296875" prefHeight="35.000099999997474" prefWidth="95.00009999999747" styleClass="background" text="母线电压过压" textFill="BLACK" GridPane.columnIndex="4" GridPane.rowIndex="0" />
+        <Label id="T33" fx:id="SystemError_MainVoltage_Under" alignment="CENTER" font="$x8" minHeight="10.9998779296875" prefHeight="35.000099999997474" prefWidth="95.00009999999747" styleClass="background" text="母线电压欠压" textFill="BLACK" GridPane.columnIndex="5" GridPane.rowIndex="0" />
+        <Label id="T33" fx:id="SystemError_Temperature_Over" alignment="CENTER" font="$x8" minHeight="10.9998779296875" prefHeight="35.000099999997474" prefWidth="95.00009999999747" styleClass="background" text="检测温度过高" textFill="BLACK" GridPane.columnIndex="6" GridPane.rowIndex="0" />
+        <Label id="T33" fx:id="SystemError_Temperature_Under" alignment="CENTER" font="$x8" minHeight="10.9998779296875" prefHeight="35.000099999997474" prefWidth="95.00009999999747" styleClass="background" text="检测温度过低" textFill="BLACK" GridPane.columnIndex="7" GridPane.rowIndex="0" />
+        <Label id="T33" fx:id="SystemError_PCBConnection_Error" alignment="CENTER" font="$x8" minHeight="10.9998779296875" prefHeight="35.000099999997474" prefWidth="95.00009999999747" styleClass="background" text="控制板连接" textFill="BLACK" GridPane.columnIndex="8" GridPane.rowIndex="0" />
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+    <AnchorPane id="AnchorPane" layoutX="11.0" layoutY="528.0">
+      <children>
+        <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#24be72" height="167.0" layoutX="2.0" layoutY="1.0" stroke="BLACK" strokeLineCap="SQUARE" strokeLineJoin="MITER" strokeType="OUTSIDE" width="215.10052490234375" />
+        <Button fx:id="ChargingControl_Button" layoutX="53.0" layoutY="107.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="56.0" prefWidth="113.0" text="启动充电" />
+        <Label font="$x1" layoutX="16.0" layoutY="13.0" text="充电控制电压" textFill="BLACK" />
+        <ImageView fx:id="Charging_StatusLamp" fitHeight="16.0" fitWidth="16.0" layoutX="60.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="file:/D:/Work/Java/Prj/JavaFX_Raspberry_Prj/AODI/src/statusbar_message_light_orange.png" />
+          </image>
+        </ImageView>
+        <Label id="Charging_InputCurrent" fx:id="Charging_ControlVoltage" alignment="CENTER" font="$x2" layoutX="-1.0" layoutY="39.0" prefHeight="68.0" prefWidth="221.0" text="0V" textAlignment="CENTER" textFill="BLACK" />
+        <CheckBox id="Charging_InputVoltageCurve_Sel" fx:id="Charging_ControlVoltageCurve_Sel" layoutX="166.0" layoutY="15.0" mnemonicParsing="false" onAction="#Button_Pro" selected="false" text="曲线" />
+      </children>
+    </AnchorPane>
+    <AnchorPane id="AnchorPane" layoutX="257.0" layoutY="528.0">
+      <children>
+        <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#757525" height="167.0" layoutX="2.0" layoutY="1.0" stroke="BLACK" strokeLineCap="SQUARE" strokeLineJoin="MITER" strokeType="OUTSIDE" width="280.10052490234375" />
+        <TextArea id="T11" fx:id="SystemInfo_TextArea" layoutX="13.0" layoutY="37.0" opacity="1.0" prefHeight="122.0" prefWidth="259.0" text="" wrapText="true" />
+        <Label font="$x1" layoutX="16.0" layoutY="13.0" text="系统信息" textFill="BLACK" />
+        <Button fx:id="SystemInfo_Clean_Button" layoutX="179.0" layoutY="6.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="27.0" prefWidth="90.0" text="信息清空" />
+      </children>
+    </AnchorPane>
+    <Button fx:id="ChartRun_Button" layoutX="952.0" layoutY="351.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="62.0" text="停止" />
+    <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#146f95" height="167.0" layoutX="568.0" layoutY="529.0" stroke="BLACK" strokeLineCap="SQUARE" strokeLineJoin="MITER" strokeType="OUTSIDE" width="440.99993896484375" />
+    <TabPane id="" focusTraversable="true" layoutX="582.0" layoutY="536.0" mouseTransparent="false" prefHeight="153.0" prefWidth="414.0" rotateGraphic="false" tabClosingPolicy="UNAVAILABLE" visible="true">
+      <tabs>
+        <Tab id="T11" closable="true" disable="false" text="充电机控制策略配置">
+          <content>
+            <AnchorPane id="T11" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="background">
+              <children>
+                <Label layoutX="44.0" layoutY="44.0" prefWidth="61.0" text="策略文件" textFill="BLACK">
+                  <font>
+                    <Font name="FZYaoTi" size="14.0" fx:id="x4" />
+                  </font>
+                </Label>
+                <Button id="OptionSet_ChargeVoltageSet_Button" fx:id="OptionSet_StrategyLoad_Button" layoutX="299.0" layoutY="40.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="27.0" prefWidth="72.0" text="加载" />
+                <ImageView id="Connection_StatusLamp" fx:id="OptionSet_StrategySet_Status" fitHeight="16.0" fitWidth="16.0" layoutX="70.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@statusbar_message_light_orange.png" />
+                  </image>
+                </ImageView>
+                <Label font="$x4" layoutX="10.0" layoutY="7.0" prefWidth="61.0" text="策略状态" textFill="BLACK" />
+                <Button id="OptionSet_ChargeVoltageSet_Button" fx:id="OptionSet_StrategyNew_Button" layoutX="299.0" layoutY="74.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="27.0" prefWidth="72.00009999999747" text="新建" />
+                <TextField id="T1" fx:id="OptionSet_StrategyLoadFile" alignment="CENTER" disable="false" layoutX="105.0" layoutY="41.0" prefHeight="25.0" prefWidth="186.0" text="----" visible="true" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab id="T22" text="电压报警阀值设定">
+          <content>
+            <AnchorPane id="T22" prefHeight="200.0" prefWidth="200.0" styleClass="background">
+              <children>
+                <GridPane layoutX="79.0" layoutY="2.0" prefWidth="259.0" vgap="0.0">
+                  <children>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                      <children>
+                        <Label alignment="CENTER" font="$x4" layoutX="47.0" layoutY="7.0" prefWidth="113.0" text="输出电压过压阀值" textFill="BLACK" />
+                        <TextField id="T1" fx:id="OptionSet_OutputVoltage_Over" alignment="CENTER" disable="false" layoutX="161.0" layoutY="3.0" prefHeight="25.0" prefWidth="62.0" text="0" visible="true" />
+                        <RadioButton id="OptionSet_InputVoltage_Over_Do" fx:id="OptionSet_OutputVoltage_Over_Do" layoutX="33.0" layoutY="9.0" mnemonicParsing="false" onAction="#Button_Pro" text="" />
+                        <Label font="$x4" layoutX="225.0" layoutY="7.0" text="V" textFill="BLACK" />
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                      <children>
+                        <Label alignment="CENTER" font="$x4" layoutX="47.0" layoutY="7.0" prefWidth="113.0" text="输出电压欠压阀值" textFill="BLACK" />
+                        <TextField id="T1" fx:id="OptionSet_OutputVoltage_Under" alignment="CENTER" disable="false" layoutX="161.0" layoutY="3.0" prefHeight="25.0" prefWidth="62.0" text="0" visible="true" />
+                        <RadioButton id="OptionSet_InputVoltage_Under_Do" fx:id="OptionSet_OutputVoltage_Under_Do" layoutX="33.0" layoutY="9.0" mnemonicParsing="false" onAction="#Button_Pro" text="" />
+                        <Label font="$x4" layoutX="225.0" layoutY="7.0" text="V" textFill="BLACK" />
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                      <children>
+                        <Label alignment="CENTER" font="$x4" layoutX="47.0" layoutY="7.0" prefWidth="113.0" text="母线电压过压阀值" textFill="BLACK" />
+                        <TextField id="T1" fx:id="OptionSet_MainVoltage_Over" alignment="CENTER" disable="false" layoutX="161.0" layoutY="3.0" prefHeight="25.0" prefWidth="62.0" text="0" visible="true" />
+                        <RadioButton fx:id="OptionSet_MainVoltage_Over_Do" layoutX="33.0" layoutY="9.0" mnemonicParsing="false" onAction="#Button_Pro" text="" />
+                        <Label font="$x4" layoutX="225.0" layoutY="7.0" text="V" textFill="BLACK" />
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="3">
+                      <children>
+                        <Label alignment="CENTER" font="$x4" layoutX="47.0" layoutY="7.0" prefWidth="113.0" text="母线电压欠压阀值" textFill="BLACK" />
+                        <TextField id="T1" fx:id="OptionSet_MainVoltage_Under" alignment="CENTER" disable="false" layoutX="161.0" layoutY="3.0" prefHeight="25.0" prefWidth="62.0" text="0" visible="true" />
+                        <RadioButton fx:id="OptionSet_MainVoltage_Under_Do" layoutX="33.0" layoutY="9.0" mnemonicParsing="false" onAction="#Button_Pro" text="" />
+                        <Label font="$x4" layoutX="225.0" layoutY="7.0" text="V" textFill="BLACK" />
+                      </children>
+                    </AnchorPane>
+                  </children>
+                  <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  </columnConstraints>
+                  <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+                </GridPane>
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab id="T33" text="电流报警阀值设定">
+          <content>
+            <AnchorPane id="T33" prefHeight="200.0" prefWidth="200.0" styleClass="background">
+              <children>
+                <GridPane layoutX="79.0" layoutY="35.0" prefWidth="259.0" vgap="0.0">
+                  <children>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                      <children>
+                        <Label alignment="CENTER" font="$x4" layoutX="47.0" layoutY="7.0" prefWidth="113.0" text="输出电流过流阀值" textFill="BLACK" />
+                        <TextField id="T1" fx:id="OptionSet_OutputCurrent_Over" alignment="CENTER" disable="false" layoutX="161.0" layoutY="3.0" prefHeight="25.0" prefWidth="62.0" text="0" visible="true" />
+                        <RadioButton id="OptionSet_InputCurrent_Over_Do" fx:id="OptionSet_OutputCurrent_Over_Do" layoutX="33.0" layoutY="9.0" mnemonicParsing="false" onAction="#Button_Pro" text="" />
+                        <Label font="$x4" layoutX="225.0" layoutY="7.0" text="A" textFill="BLACK" />
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                      <children>
+                        <Label alignment="CENTER" font="$x4" layoutX="47.0" layoutY="7.0" prefWidth="113.0" text="输出电流过低阀值" textFill="BLACK" />
+                        <TextField id="T1" fx:id="OptionSet_OutputCurrent_Under" alignment="CENTER" disable="false" layoutX="161.0" layoutY="3.0" prefHeight="25.0" prefWidth="62.0" text="0" visible="true" />
+                        <RadioButton id="OptionSet_InputCurrent_Under_Do" fx:id="OptionSet_OutputCurrent_Under_Do" layoutX="33.0" layoutY="9.0" mnemonicParsing="false" onAction="#Button_Pro" text="" />
+                        <Label font="$x4" layoutX="225.0" layoutY="7.0" text="A" textFill="BLACK" />
+                      </children>
+                    </AnchorPane>
+                  </children>
+                  <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  </columnConstraints>
+                  <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+                </GridPane>
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab id="T44" text="温度报警阀值设定">
+          <content>
+            <AnchorPane id="T44" prefHeight="200.0" prefWidth="200.0" styleClass="background">
+              <children>
+                <GridPane layoutX="79.0" layoutY="34.0" prefWidth="259.0" vgap="0.0">
+                  <children>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                      <children>
+                        <Label alignment="CENTER" font="$x4" layoutX="47.0" layoutY="7.0" prefWidth="113.0" text="检测温度过高阀值" textFill="BLACK" />
+                        <TextField id="T1" fx:id="OptionSet_Temperature_Over" alignment="CENTER" disable="false" layoutX="161.0" layoutY="3.0" prefHeight="25.0" prefWidth="62.0" text="0" visible="true" />
+                        <RadioButton fx:id="OptionSet_Temperature_Over_Do" layoutX="33.0" layoutY="9.0" mnemonicParsing="false" onAction="#Button_Pro" text="" />
+                        <Label font="$x4" layoutX="225.0" layoutY="7.0" text="℃" textFill="BLACK" />
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                      <children>
+                        <Label alignment="CENTER" font="$x4" layoutX="47.0" layoutY="7.0" prefWidth="113.0" text="检测温度过低阀值" textFill="BLACK" />
+                        <TextField id="T1" fx:id="OptionSet_Temperature_Under" alignment="CENTER" disable="false" layoutX="161.0" layoutY="3.0" prefHeight="25.0" prefWidth="62.0" text="0" visible="true" />
+                        <RadioButton fx:id="OptionSet_Temperature_Under_Do" layoutX="33.0" layoutY="9.0" mnemonicParsing="false" onAction="#Button_Pro" text="" />
+                        <Label font="$x4" layoutX="225.0" layoutY="7.0" text="℃" textFill="BLACK" />
+                      </children>
+                    </AnchorPane>
+                  </children>
+                  <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  </columnConstraints>
+                  <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+                </GridPane>
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab id="T55" text="通讯端口设置">
+          <content>
+            <AnchorPane id="T55" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="background">
+              <children>
+                <Label font="$x4" layoutX="125.0" layoutY="31.0" prefWidth="72.0" text="串口端口号" textFill="BLACK" />
+                <Label font="$x4" layoutX="125.0" layoutY="78.0" prefWidth="72.0" text="串口波特率" textFill="BLACK" />
+                <ChoiceBox id="T22" fx:id="OptionSet_SeriseSet_Port" layoutX="207.0" layoutY="27.0" prefHeight="24.0" prefWidth="72.0">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="项 1" />
+                      <String fx:value="项 2" />
+                      <String fx:value="项 3" />
+                    </FXCollections>
+                  </items>
+                </ChoiceBox>
+                <ChoiceBox id="T22" fx:id="OptionSet_SeriseSet_Bound" layoutX="207.0" layoutY="73.0" prefHeight="24.0" prefWidth="72.0">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="项 1" />
+                      <String fx:value="项 2" />
+                      <String fx:value="项 3" />
+                    </FXCollections>
+                  </items>
+                </ChoiceBox>
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+      </tabs>
+    </TabPane>
+    <Button fx:id="ConnectionControl_Button" layoutX="887.0" layoutY="714.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="48.0" prefWidth="126.0" text="通讯未连接" />
+    <ImageView fx:id="Connection_StatusLamp" fitHeight="16.0" fitWidth="16.0" layoutX="894.0" layoutY="719.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@statusbar_message_light_orange.png" />
+      </image>
+    </ImageView>
+    <ImageView fx:id="System_Exit" fitHeight="32.0" fitWidth="32.0" layoutX="988.0" layoutY="3.0" onMouseClicked="#SystemExit_Pro" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@power.png" />
+      </image>
+    </ImageView>
+    <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="268.0" minHeight="229.0" prefHeight="229.0">
+      <children>
+        <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#595959" height="227.0" layoutX="1.0" layoutY="1.0" stroke="BLACK" strokeLineCap="SQUARE" strokeLineJoin="MITER" strokeType="OUTSIDE" width="219.0" />
+        <Label font="$x1" layoutX="16.0" layoutY="13.0" text="电源电压选择" textFill="BLACK" />
+        <Rectangle id="Charging_RunTime_Rect" fx:id="Charging_Power110_Rect" arcHeight="30.0" arcWidth="30.0" height="40.0" layoutX="42.0" layoutY="42.0" onMouseClicked="#PowerSel_Pro" onMouseEntered="#PowerSel_Pro" onMouseExited="#PowerSel_Pro" stroke="BLACK" strokeLineCap="SQUARE" strokeLineJoin="MITER" strokeType="OUTSIDE" width="138.0">
+          <fill>
+            <Color blue="0.000" green="0.384" red="0.800" fx:id="x5" />
+          </fill>
+        </Rectangle>
+        <Label fx:id="Charging_Power110_Label" layoutX="81.0" layoutY="47.0" onMouseClicked="#PowerSel_Pro" onMouseEntered="#PowerSel_Pro" onMouseExited="#PowerSel_Pro" text="110V" textFill="BLACK">
+          <font>
+            <Font size="25.0" fx:id="x6" />
+          </font>
+        </Label>
+        <Rectangle id="Charging_RunTime_Rect" fx:id="Charging_Power220_Rect" arcHeight="30.0" arcWidth="30.0" fill="$x5" height="40.0" layoutX="42.0" layoutY="88.0" onMouseClicked="#PowerSel_Pro" onMouseEntered="#PowerSel_Pro" onMouseExited="#PowerSel_Pro" stroke="BLACK" strokeLineCap="SQUARE" strokeLineJoin="MITER" strokeType="OUTSIDE" width="138.0" />
+        <Label fx:id="Charging_Power220_Label" font="$x6" layoutX="81.0" layoutY="93.0" onMouseClicked="#PowerSel_Pro" onMouseEntered="#PowerSel_Pro" onMouseExited="#PowerSel_Pro" text="220V" textFill="BLACK" />
+        <Rectangle id="Charging_RunTime_Rect" fx:id="Charging_Power260_Rect" arcHeight="30.0" arcWidth="30.0" fill="$x5" height="40.0" layoutX="42.0" layoutY="134.0" onMouseClicked="#PowerSel_Pro" onMouseEntered="#PowerSel_Pro" onMouseExited="#PowerSel_Pro" stroke="BLACK" strokeLineCap="SQUARE" strokeLineJoin="MITER" strokeType="OUTSIDE" width="138.0" />
+        <Label fx:id="Charging_Power260_Label" font="$x6" layoutX="81.0" layoutY="139.0" onMouseClicked="#PowerSel_Pro" onMouseEntered="#PowerSel_Pro" onMouseExited="#PowerSel_Pro" text="260V" textFill="BLACK" />
+        <Button id="OptionSet_ChargeVoltageSet_Button" fx:id="Charging_PowerSet_Button" layoutX="72.0" layoutY="185.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="37.0" prefWidth="80.0" text="确定" />
+        <ImageView id="Connection_StatusLamp" fx:id="Charging_PowerStatus_Lamp" fitHeight="16.0" fitWidth="16.0" layoutX="78.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="file:/D:/Work/Java/Prj/JavaFX_Raspberry_Prj/AODI/src/status_yellow.png" />
+          </image>
+        </ImageView>
+      </children>
+    </AnchorPane>
+    <Button fx:id="DA_Down" layoutX="960.0" layoutY="449.0" mnemonicParsing="false" onAction="#Button_Pro" prefWidth="33.0" text="-" />
+    <Button fx:id="DA_Up" layoutX="960.0" layoutY="291.0" mnemonicParsing="false" onAction="#Button_Pro" text="+" />
+  </children>
+  <stylesheets>
+    <URL value="@AODI.css" />
+  </stylesheets>
+</AnchorPane>

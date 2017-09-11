@@ -1,0 +1,1842 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="Root" disable="false" minHeight="768.0" minWidth="1024.0" prefHeight="800.0" prefWidth="1024.0" styleClass="background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AODI_QC.QC_Controller">
+  <!-- TODO Add Nodes -->
+  <children>
+    <Label alignment="CENTER" layoutX="372.0" layoutY="1.0" prefWidth="307.0" text="网络监控系统V1.0">
+      <font>
+        <Font name="STKaiti" size="35.0" />
+      </font>
+      <textFill>
+        <Color blue="0.749" green="0.749" red="0.749" fx:id="x4" />
+      </textFill>
+    </Label>
+    <ImageView fx:id="App_Exit" fitHeight="32.0" fitWidth="32.0" layoutX="985.0" layoutY="6.0" onMouseClicked="#AppExit_Pro" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@error.png" />
+      </image>
+    </ImageView>
+    <AnchorPane layoutX="12.0" layoutY="75.0" prefHeight="529.0" prefWidth="996.0">
+      <children>
+        <GridPane alignment="CENTER" gridLinesVisible="true" hgap="2.0" layoutX="0.0" layoutY="0.0" prefHeight="539.0" prefWidth="996.0" vgap="2.0">
+          <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+              <children>
+                <Rectangle id="" fx:id="Test_Target1_Rectangle" arcHeight="10.0" arcWidth="10.0" height="272.0" layoutX="0.0" layoutY="0.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="201.0">
+                  <effect>
+                    <Lighting>
+                      <bumpInput>
+                        <Shadow />
+                      </bumpInput>
+                      <light>
+                        <javafx.scene.effect.Light.Distant>
+                          <color>
+                            <Color blue="0.000" green="0.961" red="1.000" fx:id="x7" />
+                          </color>
+                        </javafx.scene.effect.Light.Distant>
+                      </light>
+                    </Lighting>
+                  </effect>
+                  <fill>
+                    <Color blue="0.800" green="0.992" red="1.000" fx:id="x2" />
+                  </fill>
+                </Rectangle>
+                <ImageView fx:id="Test_Group1_ImageView" fitHeight="32.0" fitWidth="32.0" layoutX="158.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@status_yellow.png" />
+                  </image>
+                </ImageView>
+                <Label fx:id="Test_Target1_TimeName_Label" layoutX="62.0" layoutY="56.0" text="定时时间" textFill="BLACK">
+                  <font>
+                    <Font name="STZhongsong" size="20.0" fx:id="x3" />
+                  </font>
+                </Label>
+                <Label fx:id="Test_Target1_RunTime_Label" alignment="CENTER" layoutX="39.0" layoutY="83.0" text="00:00:00" textFill="BLACK">
+                  <font>
+                    <Font name="Arial Rounded MT Bold" size="30.0" fx:id="x5" />
+                  </font>
+                </Label>
+                <Label fx:id="Test_Target1_Name_Label" alignment="CENTER" layoutX="47.0" layoutY="12.0" prefWidth="114.0" text="老化组1" textFill="BLACK">
+                  <font>
+                    <Font name="Arial Black" size="20.0" fx:id="x6" />
+                  </font>
+                </Label>
+                <GridPane fx:id="Test_Group1_Pane" gridLinesVisible="true" hgap="1.0" layoutX="2.0" layoutY="136.0" prefWidth="196.0" vgap="1.0">
+                  <children>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group1_ImageView1" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group1_ImageView2" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group1_ImageView3" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group1_ImageView4" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group1_ImageView5" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group1_ImageView6" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group1_ImageView7" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView id="Test_Group1_ImageView9" fx:id="Test_Group1_ImageView8" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group1_ImageView9" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group1_ImageView10" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                  </children>
+                  <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  </columnConstraints>
+                  <rowConstraints>
+                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+                </GridPane>
+                <Button id="Test_Target1_Start_Button" fx:id="Test_Target1_Button1" layoutX="16.0" layoutY="214.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="43.0" prefWidth="80.0" text="开始老化" />
+                <Button id="Test_Target1_Edit_Button" fx:id="Test_Target1_Button2" layoutX="104.0" layoutY="214.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="43.0" prefWidth="80.0" text="编辑组" />
+                <ChoiceBox fx:id="Test_Target1_LeaveReason_ChoiceBox" layoutX="96.0" layoutY="166.0" prefHeight="28.999908447265625" prefWidth="84.0" visible="false">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="项 1" />
+                      <String fx:value="项 2" />
+                      <String fx:value="项 3" />
+                    </FXCollections>
+                  </items>
+                </ChoiceBox>
+                <Label fx:id="Test_Target1_LeaveReason_Label" layoutX="14.0" layoutY="169.0" text="停止原因:" textFill="BLACK" visible="false">
+                  <font>
+                    <Font name="STZhongsong" size="18.0" fx:id="x8" />
+                  </font>
+                </Label>
+                <Button id="Test_Target1_Start_Button" fx:id="Test_Target1_RunTime_Sub_Button" layoutX="26.0" layoutY="54.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="32.0" prefWidth="32.0" text="-" />
+                <Button id="Test_Target1_Start_Button" fx:id="Test_Target1_RunTime_Add_Button" layoutX="148.0" layoutY="54.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="32.0" prefWidth="32.0" text="+" />
+                <Button id="Test_Target1_Start_Button" fx:id="Test_Target1_TestRun_Button" layoutX="70.0" layoutY="122.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="35.0" prefWidth="64.0" text="启动" visible="false" />
+              </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+              <children>
+                <Rectangle fx:id="Test_Target2_Rectangle" arcHeight="10.0" arcWidth="10.0" fill="$x2" height="272.0" layoutX="0.0" layoutY="0.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="201.0">
+                  <effect>
+                    <Lighting>
+                      <bumpInput>
+                        <Shadow />
+                      </bumpInput>
+                      <light>
+                        <javafx.scene.effect.Light.Distant color="$x7" />
+                      </light>
+                    </Lighting>
+                  </effect>
+                </Rectangle>
+                <ImageView fx:id="Test_Group2_ImageView" fitHeight="32.0" fitWidth="32.0" layoutX="158.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@status_yellow.png" />
+                  </image>
+                </ImageView>
+                <Button id="Test_Target2_Start_Button" fx:id="Test_Target2_Button1" layoutX="16.0" layoutY="214.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="43.0" prefWidth="80.0" text="开始老化" />
+                <Label fx:id="Test_Target2_TimeName_Label" font="$x3" layoutX="62.0" layoutY="56.0" text="定时时间" textFill="BLACK" />
+                <Label fx:id="Test_Target2_RunTime_Label" alignment="CENTER" font="$x5" layoutX="39.0" layoutY="83.0" text="00:00:00" textFill="BLACK" />
+                <Label fx:id="Test_Target2_Name_Label" alignment="CENTER" font="$x6" layoutX="47.0" layoutY="12.0" prefWidth="114.0" text="老化组2" textFill="BLACK" />
+                <Button id="Test_Target2_Edit_Button" fx:id="Test_Target2_Button2" layoutX="104.0" layoutY="214.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="43.0" prefWidth="80.0" text="编辑组" />
+                <GridPane fx:id="Test_Group2_Pane" gridLinesVisible="true" hgap="1.0" layoutX="2.0" layoutY="136.0" prefWidth="196.0" vgap="1.0">
+                  <children>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group2_ImageView1" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group2_ImageView2" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group2_ImageView3" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group2_ImageView4" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group2_ImageView5" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group2_ImageView6" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group2_ImageView7" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group2_ImageView8" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group2_ImageView9" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group2_ImageView10" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                  </children>
+                  <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  </columnConstraints>
+                  <rowConstraints>
+                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+                </GridPane>
+                <ChoiceBox id="Test_Target1_LeaveReason_ChoiceBox" fx:id="Test_Target2_LeaveReason_ChoiceBox" layoutX="96.0" layoutY="166.0" prefHeight="28.999908447265625" prefWidth="84.0" visible="false">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="项 1" />
+                      <String fx:value="项 2" />
+                      <String fx:value="项 3" />
+                    </FXCollections>
+                  </items>
+                </ChoiceBox>
+                <Label id="Test_Target1_LeaveReason_Label" fx:id="Test_Target2_LeaveReason_Label" font="$x8" layoutX="14.0" layoutY="169.0" text="停止原因:" textFill="BLACK" visible="false" />
+                <Button id="Test_Target1_Start_Button" fx:id="Test_Target2_RunTime_Add_Button" layoutX="148.0" layoutY="54.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="32.0" prefWidth="32.0" text="+" />
+                <Button id="Test_Target1_Start_Button" fx:id="Test_Target2_RunTime_Sub_Button" layoutX="26.0" layoutY="54.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="32.0" prefWidth="32.0" text="-" />
+                <Button id="Test_Target1_Start_Button" fx:id="Test_Target2_TestRun_Button" layoutX="70.0" layoutY="122.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="35.0" prefWidth="64.0" text="启动" visible="false" />
+              </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="0">
+              <children>
+                <Rectangle fx:id="Test_Target3_Rectangle" arcHeight="10.0" arcWidth="10.0" fill="$x2" height="272.0" layoutX="0.0" layoutY="0.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="201.0">
+                  <effect>
+                    <Lighting>
+                      <bumpInput>
+                        <Shadow />
+                      </bumpInput>
+                      <light>
+                        <javafx.scene.effect.Light.Distant color="$x7" />
+                      </light>
+                    </Lighting>
+                  </effect>
+                </Rectangle>
+                <ImageView fx:id="Test_Group3_ImageView" fitHeight="32.0" fitWidth="32.0" layoutX="158.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@status_yellow.png" />
+                  </image>
+                </ImageView>
+                <Button id="Test_Target3_Start_Button" fx:id="Test_Target3_Button1" layoutX="16.0" layoutY="214.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="43.0" prefWidth="80.0" text="开始老化" />
+                <Label fx:id="Test_Target3_TimeName_Label" font="$x3" layoutX="62.0" layoutY="56.0" text="定时时间" textFill="BLACK" />
+                <Label fx:id="Test_Target3_RunTime_Label" alignment="CENTER" font="$x5" layoutX="39.0" layoutY="83.0" text="00:00:00" textFill="BLACK" />
+                <Label fx:id="Test_Target3_Name_Label" alignment="CENTER" font="$x6" layoutX="47.0" layoutY="12.0" prefWidth="114.0" text="老化组3" textFill="BLACK" />
+                <Button id="Test_Target3_Edit_Button" fx:id="Test_Target3_Button2" layoutX="104.0" layoutY="214.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="43.0" prefWidth="80.0" text="编辑组" />
+                <GridPane fx:id="Test_Group3_Pane" gridLinesVisible="true" hgap="1.0" layoutX="2.0" layoutY="136.0" prefWidth="196.0" vgap="1.0">
+                  <children>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group3_ImageView1" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group3_ImageView2" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group3_ImageView3" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group3_ImageView4" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group3_ImageView5" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group3_ImageView6" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group3_ImageView7" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group3_ImageView8" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group3_ImageView9" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group3_ImageView10" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                  </children>
+                  <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  </columnConstraints>
+                  <rowConstraints>
+                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+                </GridPane>
+                <ChoiceBox id="Test_Target1_LeaveReason_ChoiceBox" fx:id="Test_Target3_LeaveReason_ChoiceBox" layoutX="96.0" layoutY="166.0" prefHeight="28.999908447265625" prefWidth="84.0" visible="false">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="项 1" />
+                      <String fx:value="项 2" />
+                      <String fx:value="项 3" />
+                    </FXCollections>
+                  </items>
+                </ChoiceBox>
+                <Label id="Test_Target1_LeaveReason_Label" fx:id="Test_Target3_LeaveReason_Label" font="$x8" layoutX="14.0" layoutY="169.0" text="停止原因:" textFill="BLACK" visible="false" />
+                <Button id="Test_Target1_Start_Button" fx:id="Test_Target3_RunTime_Add_Button" layoutX="148.0" layoutY="54.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="32.0" prefWidth="32.0" text="+" />
+                <Button id="Test_Target1_Start_Button" fx:id="Test_Target3_RunTime_Sub_Button" layoutX="26.0" layoutY="54.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="32.0" prefWidth="32.0" text="-" />
+                <Button id="Test_Target1_Start_Button" fx:id="Test_Target3_TestRun_Button" layoutX="70.0" layoutY="122.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="35.0" prefWidth="64.0" text="启动" visible="false" />
+              </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="0">
+              <children>
+                <Rectangle fx:id="Test_Target4_Rectangle" arcHeight="10.0" arcWidth="10.0" fill="$x2" height="272.0" layoutX="0.0" layoutY="0.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="201.0">
+                  <effect>
+                    <Lighting>
+                      <bumpInput>
+                        <Shadow />
+                      </bumpInput>
+                      <light>
+                        <javafx.scene.effect.Light.Distant color="$x7" />
+                      </light>
+                    </Lighting>
+                  </effect>
+                </Rectangle>
+                <ImageView fx:id="Test_Group4_ImageView" fitHeight="32.0" fitWidth="32.0" layoutX="158.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@status_yellow.png" />
+                  </image>
+                </ImageView>
+                <Button id="Test_Target4_Start_Button" fx:id="Test_Target4_Button1" layoutX="16.0" layoutY="214.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="43.0" prefWidth="80.0" text="开始老化" />
+                <Label fx:id="Test_Target4_TimeName_Label" font="$x3" layoutX="62.0" layoutY="56.0" text="定时时间" textFill="BLACK" />
+                <Label fx:id="Test_Target4_RunTime_Label" alignment="CENTER" font="$x5" layoutX="39.0" layoutY="83.0" text="00:00:00" textFill="BLACK" />
+                <Label fx:id="Test_Target4_Name_Label" alignment="CENTER" font="$x6" layoutX="47.0" layoutY="12.0" prefWidth="114.0" text="老化组4" textFill="BLACK" />
+                <Button id="Test_Target4_Edit_Button" fx:id="Test_Target4_Button2" layoutX="104.0" layoutY="214.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="43.0" prefWidth="80.0" text="编辑组" />
+                <GridPane fx:id="Test_Group4_Pane" gridLinesVisible="true" hgap="1.0" layoutX="2.0" layoutY="136.0" prefWidth="196.0" vgap="1.0">
+                  <children>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group4_ImageView1" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group4_ImageView2" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group4_ImageView3" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group4_ImageView4" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group4_ImageView5" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group4_ImageView6" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group4_ImageView7" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group4_ImageView8" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group4_ImageView9" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group4_ImageView10" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                  </children>
+                  <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  </columnConstraints>
+                  <rowConstraints>
+                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+                </GridPane>
+                <ChoiceBox id="Test_Target1_LeaveReason_ChoiceBox" fx:id="Test_Target4_LeaveReason_ChoiceBox" layoutX="96.0" layoutY="166.0" prefHeight="28.999908447265625" prefWidth="84.0" visible="false">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="项 1" />
+                      <String fx:value="项 2" />
+                      <String fx:value="项 3" />
+                    </FXCollections>
+                  </items>
+                </ChoiceBox>
+                <Label id="Test_Target1_LeaveReason_Label" fx:id="Test_Target4_LeaveReason_Label" font="$x8" layoutX="14.0" layoutY="169.0" text="停止原因:" textFill="BLACK" visible="false" />
+                <Button id="Test_Target1_Start_Button" fx:id="Test_Target4_RunTime_Add_Button" layoutX="148.0" layoutY="54.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="32.0" prefWidth="32.0" text="+" />
+                <Button id="Test_Target1_Start_Button" fx:id="Test_Target4_RunTime_Sub_Button" layoutX="26.0" layoutY="54.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="32.0" prefWidth="32.0" text="-" />
+                <Button id="Test_Target1_Start_Button" fx:id="Test_Target4_TestRun_Button" layoutX="70.0" layoutY="122.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="35.0" prefWidth="64.0" text="启动" visible="false" />
+              </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="0">
+              <children>
+                <Rectangle fx:id="Test_Target5_Rectangle" arcHeight="10.0" arcWidth="10.0" fill="$x2" height="272.0" layoutX="0.0" layoutY="0.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="201.0">
+                  <effect>
+                    <Lighting>
+                      <bumpInput>
+                        <Shadow />
+                      </bumpInput>
+                      <light>
+                        <javafx.scene.effect.Light.Distant color="$x7" />
+                      </light>
+                    </Lighting>
+                  </effect>
+                </Rectangle>
+                <ImageView fx:id="Test_Group5_ImageView" fitHeight="32.0" fitWidth="32.0" layoutX="158.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@status_yellow.png" />
+                  </image>
+                </ImageView>
+                <Button id="Test_Target5_Start_Button" fx:id="Test_Target5_Button1" layoutX="16.0" layoutY="214.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="43.0" prefWidth="80.0" text="开始老化" />
+                <Label fx:id="Test_Target5_TimeName_Label" font="$x3" layoutX="62.0" layoutY="56.0" text="定时时间" textFill="BLACK" />
+                <Label fx:id="Test_Target5_RunTime_Label" alignment="CENTER" font="$x5" layoutX="39.0" layoutY="83.0" text="00:00:00" textFill="BLACK" />
+                <Label fx:id="Test_Target5_Name_Label" alignment="CENTER" font="$x6" layoutX="47.0" layoutY="12.0" prefWidth="114.0" text="老化组5" textFill="BLACK" />
+                <Button id="Test_Target5_Edit_Button" fx:id="Test_Target5_Button2" layoutX="104.0" layoutY="214.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="43.0" prefWidth="80.0" text="编辑组" />
+                <GridPane fx:id="Test_Group5_Pane" gridLinesVisible="true" hgap="1.0" layoutX="2.0" layoutY="136.0" prefWidth="196.0" vgap="1.0">
+                  <children>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group5_ImageView1" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group5_ImageView2" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group5_ImageView3" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group5_ImageView4" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group5_ImageView5" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group5_ImageView6" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group5_ImageView7" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group5_ImageView8" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group5_ImageView9" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group5_ImageView10" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                  </children>
+                  <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  </columnConstraints>
+                  <rowConstraints>
+                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+                </GridPane>
+                <ChoiceBox id="Test_Target1_LeaveReason_ChoiceBox" fx:id="Test_Target5_LeaveReason_ChoiceBox" layoutX="96.0" layoutY="166.0" prefHeight="28.999908447265625" prefWidth="84.0" visible="false">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="项 1" />
+                      <String fx:value="项 2" />
+                      <String fx:value="项 3" />
+                    </FXCollections>
+                  </items>
+                </ChoiceBox>
+                <Label id="Test_Target1_LeaveReason_Label" fx:id="Test_Target5_LeaveReason_Label" font="$x8" layoutX="14.0" layoutY="169.0" text="停止原因:" textFill="BLACK" visible="false" />
+                <Button id="Test_Target1_Start_Button" fx:id="Test_Target5_RunTime_Add_Button" layoutX="148.0" layoutY="54.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="32.0" prefWidth="32.0" text="+" />
+                <Button id="Test_Target1_Start_Button" fx:id="Test_Target5_RunTime_Sub_Button" layoutX="26.0" layoutY="54.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="32.0" prefWidth="32.0" text="-" />
+                <Button id="Test_Target1_Start_Button" fx:id="Test_Target5_TestRun_Button" layoutX="70.0" layoutY="122.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="35.0" prefWidth="64.0" text="启动" visible="false" />
+              </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+              <children>
+                <Rectangle fx:id="Test_Target6_Rectangle" arcHeight="10.0" arcWidth="10.0" fill="$x2" height="272.0" layoutX="0.0" layoutY="0.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="201.0">
+                  <effect>
+                    <Lighting>
+                      <bumpInput>
+                        <Shadow />
+                      </bumpInput>
+                      <light>
+                        <javafx.scene.effect.Light.Distant color="$x7" />
+                      </light>
+                    </Lighting>
+                  </effect>
+                </Rectangle>
+                <ImageView fx:id="Test_Group6_ImageView" fitHeight="32.0" fitWidth="32.0" layoutX="158.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@status_yellow.png" />
+                  </image>
+                </ImageView>
+                <Button id="Test_Target6_Start_Button" fx:id="Test_Target6_Button1" layoutX="16.0" layoutY="214.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="43.0" prefWidth="80.0" text="开始老化" />
+                <Label fx:id="Test_Target6_TimeName_Label" font="$x3" layoutX="62.0" layoutY="56.0" text="定时时间" textFill="BLACK" />
+                <Label fx:id="Test_Target6_RunTime_Label" alignment="CENTER" font="$x5" layoutX="39.0" layoutY="83.0" text="00:00:00" textFill="BLACK" />
+                <Label fx:id="Test_Target6_Name_Label" alignment="CENTER" font="$x6" layoutX="47.0" layoutY="12.0" prefWidth="114.0" text="老化组6" textFill="BLACK" />
+                <Button id="Test_Target6_Edit_Button" fx:id="Test_Target6_Button2" layoutX="104.0" layoutY="214.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="43.0" prefWidth="80.0" text="编辑组" />
+                <GridPane fx:id="Test_Group6_Pane" gridLinesVisible="true" hgap="1.0" layoutX="2.0" layoutY="136.0" prefWidth="196.0" vgap="1.0">
+                  <children>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group6_ImageView1" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group6_ImageView2" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group6_ImageView3" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group6_ImageView4" fitHeight="32.0" fitWidth="32.0" layoutX="4.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group6_ImageView5" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group6_ImageView6" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group6_ImageView7" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group6_ImageView8" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group6_ImageView9" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group6_ImageView10" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                  </children>
+                  <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  </columnConstraints>
+                  <rowConstraints>
+                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+                </GridPane>
+                <ChoiceBox id="Test_Target1_LeaveReason_ChoiceBox" fx:id="Test_Target6_LeaveReason_ChoiceBox" layoutX="96.0" layoutY="166.0" prefHeight="28.999908447265625" prefWidth="84.0" visible="false">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="项 1" />
+                      <String fx:value="项 2" />
+                      <String fx:value="项 3" />
+                    </FXCollections>
+                  </items>
+                </ChoiceBox>
+                <Label id="Test_Target1_LeaveReason_Label" fx:id="Test_Target6_LeaveReason_Label" font="$x8" layoutX="14.0" layoutY="169.0" text="停止原因:" textFill="BLACK" visible="false" />
+                <Button id="Test_Target1_Start_Button" fx:id="Test_Target6_RunTime_Add_Button" layoutX="148.0" layoutY="54.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="32.0" prefWidth="32.0" text="+" />
+                <Button id="Test_Target1_Start_Button" fx:id="Test_Target6_RunTime_Sub_Button" layoutX="26.0" layoutY="54.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="32.0" prefWidth="32.0" text="-" />
+                <Button id="Test_Target1_Start_Button" fx:id="Test_Target6_TestRun_Button" layoutX="70.0" layoutY="122.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="35.0" prefWidth="64.0" text="启动" visible="false" />
+              </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+              <children>
+                <Rectangle fx:id="Test_Target7_Rectangle" arcHeight="10.0" arcWidth="10.0" fill="$x2" height="272.0" layoutX="0.0" layoutY="0.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="201.0">
+                  <effect>
+                    <Lighting>
+                      <bumpInput>
+                        <Shadow />
+                      </bumpInput>
+                      <light>
+                        <javafx.scene.effect.Light.Distant color="$x7" />
+                      </light>
+                    </Lighting>
+                  </effect>
+                </Rectangle>
+                <ImageView fx:id="Test_Group7_ImageView" fitHeight="32.0" fitWidth="32.0" layoutX="158.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@status_yellow.png" />
+                  </image>
+                </ImageView>
+                <Button id="Test_Target7_Start_Button" fx:id="Test_Target7_Button1" layoutX="16.0" layoutY="214.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="43.0" prefWidth="80.0" text="开始老化" />
+                <Label fx:id="Test_Target7_TimeName_Label" font="$x3" layoutX="62.0" layoutY="56.0" text="定时时间" textFill="BLACK" />
+                <Label fx:id="Test_Target7_RunTime_Label" alignment="CENTER" font="$x5" layoutX="39.0" layoutY="83.0" text="00:00:00" textFill="BLACK" />
+                <Label fx:id="Test_Target7_Name_Label" alignment="CENTER" font="$x6" layoutX="47.0" layoutY="12.0" prefWidth="114.0" text="老化组7" textFill="BLACK" />
+                <Button id="Test_Target7_Edit_Button" fx:id="Test_Target7_Button2" layoutX="104.0" layoutY="214.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="43.0" prefWidth="80.0" text="编辑组" />
+                <GridPane fx:id="Test_Group7_Pane" gridLinesVisible="true" hgap="1.0" layoutX="2.0" layoutY="136.0" prefWidth="196.0" vgap="1.0">
+                  <children>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group7_ImageView1" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group7_ImageView2" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group7_ImageView3" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group7_ImageView4" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group7_ImageView5" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group7_ImageView6" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group7_ImageView7" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group7_ImageView8" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group7_ImageView9" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group7_ImageView10" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                  </children>
+                  <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  </columnConstraints>
+                  <rowConstraints>
+                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+                </GridPane>
+                <ChoiceBox id="Test_Target1_LeaveReason_ChoiceBox" fx:id="Test_Target7_LeaveReason_ChoiceBox" layoutX="96.0" layoutY="166.0" prefHeight="28.999908447265625" prefWidth="84.0" visible="false">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="项 1" />
+                      <String fx:value="项 2" />
+                      <String fx:value="项 3" />
+                    </FXCollections>
+                  </items>
+                </ChoiceBox>
+                <Label id="Test_Target1_LeaveReason_Label" fx:id="Test_Target7_LeaveReason_Label" font="$x8" layoutX="14.0" layoutY="169.0" text="停止原因:" textFill="BLACK" visible="false" />
+                <Button id="Test_Target1_Start_Button" fx:id="Test_Target7_RunTime_Add_Button" layoutX="148.0" layoutY="54.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="32.0" prefWidth="32.0" text="+" />
+                <Button id="Test_Target1_Start_Button" fx:id="Test_Target7_RunTime_Sub_Button" layoutX="26.0" layoutY="54.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="32.0" prefWidth="32.0" text="-" />
+                <Button id="Test_Target1_Start_Button" fx:id="Test_Target7_TestRun_Button" layoutX="70.0" layoutY="122.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="35.0" prefWidth="64.0" text="启动" visible="false" />
+              </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+              <children>
+                <Rectangle fx:id="Test_Target8_Rectangle" arcHeight="10.0" arcWidth="10.0" fill="$x2" height="272.0" layoutX="0.0" layoutY="0.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="201.0">
+                  <effect>
+                    <Lighting>
+                      <bumpInput>
+                        <Shadow />
+                      </bumpInput>
+                      <light>
+                        <javafx.scene.effect.Light.Distant color="$x7" />
+                      </light>
+                    </Lighting>
+                  </effect>
+                </Rectangle>
+                <ImageView fx:id="Test_Group8_ImageView" fitHeight="32.0" fitWidth="32.0" layoutX="158.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@status_yellow.png" />
+                  </image>
+                </ImageView>
+                <Button id="Test_Target8_Start_Button" fx:id="Test_Target8_Button1" layoutX="16.0" layoutY="214.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="43.0" prefWidth="80.0" text="开始老化" />
+                <Label fx:id="Test_Target8_TimeName_Label" font="$x3" layoutX="62.0" layoutY="56.0" text="定时时间" textFill="BLACK" />
+                <Label fx:id="Test_Target8_RunTime_Label" alignment="CENTER" font="$x5" layoutX="39.0" layoutY="83.0" text="00:00:00" textFill="BLACK" />
+                <Label fx:id="Test_Target8_Name_Label" alignment="CENTER" font="$x6" layoutX="47.0" layoutY="12.0" prefWidth="114.0" text="老化组8" textFill="BLACK" />
+                <Button id="Test_Target8_Edit_Button" fx:id="Test_Target8_Button2" layoutX="104.0" layoutY="214.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="43.0" prefWidth="80.0" text="编辑组" />
+                <GridPane fx:id="Test_Group8_Pane" gridLinesVisible="true" hgap="1.0" layoutX="2.0" layoutY="136.0" prefWidth="196.0" vgap="1.0">
+                  <children>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group8_ImageView1" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group8_ImageView2" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group8_ImageView3" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group8_ImageView4" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group8_ImageView5" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group8_ImageView6" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group8_ImageView7" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group8_ImageView8" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group8_ImageView9" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group8_ImageView10" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                  </children>
+                  <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  </columnConstraints>
+                  <rowConstraints>
+                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+                </GridPane>
+                <ChoiceBox id="Test_Target1_LeaveReason_ChoiceBox" fx:id="Test_Target8_LeaveReason_ChoiceBox" layoutX="96.0" layoutY="166.0" prefHeight="28.999908447265625" prefWidth="84.0" visible="false">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="项 1" />
+                      <String fx:value="项 2" />
+                      <String fx:value="项 3" />
+                    </FXCollections>
+                  </items>
+                </ChoiceBox>
+                <Label id="Test_Target1_LeaveReason_Label" fx:id="Test_Target8_LeaveReason_Label" font="$x8" layoutX="14.0" layoutY="169.0" text="停止原因:" textFill="BLACK" visible="false" />
+                <Button id="Test_Target1_Start_Button" fx:id="Test_Target8_RunTime_Add_Button" layoutX="148.0" layoutY="54.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="32.0" prefWidth="32.0" text="+" />
+                <Button id="Test_Target1_Start_Button" fx:id="Test_Target8_RunTime_Sub_Button" layoutX="26.0" layoutY="54.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="32.0" prefWidth="32.0" text="-" />
+                <Button id="Test_Target1_Start_Button" fx:id="Test_Target8_TestRun_Button" layoutX="70.0" layoutY="122.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="35.0" prefWidth="64.0" text="启动" visible="false" />
+              </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+              <children>
+                <Rectangle fx:id="Test_Target9_Rectangle" arcHeight="10.0" arcWidth="10.0" fill="$x2" height="272.0" layoutX="0.0" layoutY="0.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="201.0">
+                  <effect>
+                    <Lighting>
+                      <bumpInput>
+                        <Shadow />
+                      </bumpInput>
+                      <light>
+                        <javafx.scene.effect.Light.Distant color="$x7" />
+                      </light>
+                    </Lighting>
+                  </effect>
+                </Rectangle>
+                <ImageView fx:id="Test_Group9_ImageView" fitHeight="32.0" fitWidth="32.0" layoutX="158.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@status_yellow.png" />
+                  </image>
+                </ImageView>
+                <Button id="Test_Target9_Start_Button" fx:id="Test_Target9_Button1" layoutX="16.0" layoutY="214.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="43.0" prefWidth="80.0" text="开始老化" />
+                <Label fx:id="Test_Target9_TimeName_Label" font="$x3" layoutX="62.0" layoutY="56.0" text="定时时间" textFill="BLACK" />
+                <Label fx:id="Test_Target9_RunTime_Label" alignment="CENTER" font="$x5" layoutX="39.0" layoutY="83.0" text="00:00:00" textFill="BLACK" />
+                <Label fx:id="Test_Target9_Name_Label" alignment="CENTER" font="$x6" layoutX="47.0" layoutY="13.0" prefWidth="114.0" text="老化组9" textFill="BLACK" />
+                <Button id="Test_Target1_Edit_Button" fx:id="Test_Target9_Button2" layoutX="104.0" layoutY="215.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="43.0" prefWidth="80.0" text="编辑组" />
+                <GridPane fx:id="Test_Group9_Pane" gridLinesVisible="true" hgap="1.0" layoutX="2.0" layoutY="136.0" prefWidth="196.0" vgap="1.0">
+                  <children>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group9_ImageView1" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group9_ImageView2" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group9_ImageView3" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group9_ImageView4" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group9_ImageView5" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group9_ImageView6" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group9_ImageView7" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group9_ImageView8" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group9_ImageView9" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group9_ImageView10" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                  </children>
+                  <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  </columnConstraints>
+                  <rowConstraints>
+                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+                </GridPane>
+                <ChoiceBox id="Test_Target1_LeaveReason_ChoiceBox" fx:id="Test_Target9_LeaveReason_ChoiceBox" layoutX="96.0" layoutY="166.0" prefHeight="28.999908447265625" prefWidth="84.0" visible="false">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="项 1" />
+                      <String fx:value="项 2" />
+                      <String fx:value="项 3" />
+                    </FXCollections>
+                  </items>
+                </ChoiceBox>
+                <Label id="Test_Target1_LeaveReason_Label" fx:id="Test_Target9_LeaveReason_Label" font="$x8" layoutX="14.0" layoutY="169.0" text="停止原因:" textFill="BLACK" visible="false" />
+                <Button id="Test_Target1_Start_Button" fx:id="Test_Target9_RunTime_Add_Button" layoutX="148.0" layoutY="54.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="32.0" prefWidth="32.0" text="+" />
+                <Button id="Test_Target1_Start_Button" fx:id="Test_Target9_RunTime_Sub_Button" layoutX="26.0" layoutY="54.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="32.0" prefWidth="32.0" text="-" />
+                <Button id="Test_Target1_Start_Button" fx:id="Test_Target9_TestRun_Button" layoutX="70.0" layoutY="122.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="35.0" prefWidth="64.0" text="启动" visible="false" />
+              </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+              <children>
+                <Rectangle fx:id="Test_Target10_Rectangle" arcHeight="10.0" arcWidth="10.0" fill="$x2" height="272.0" layoutX="0.0" layoutY="0.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="201.0">
+                  <effect>
+                    <Lighting>
+                      <bumpInput>
+                        <Shadow />
+                      </bumpInput>
+                      <light>
+                        <javafx.scene.effect.Light.Distant color="$x7" />
+                      </light>
+                    </Lighting>
+                  </effect>
+                </Rectangle>
+                <ImageView fx:id="Test_Group10_ImageView" fitHeight="32.0" fitWidth="32.0" layoutX="159.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@status_yellow.png" />
+                  </image>
+                </ImageView>
+                <Button id="Test_Target10_Name_Label" fx:id="Test_Target10_Button1" layoutX="16.0" layoutY="214.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="43.0" prefWidth="80.0" text="开始老化" />
+                <Label fx:id="Test_Target10_TimeName_Label" font="$x3" layoutX="62.0" layoutY="56.0" text="定时时间" textFill="BLACK" />
+                <Label fx:id="Test_Target10_RunTime_Label" alignment="CENTER" font="$x5" layoutX="39.0" layoutY="83.0" text="00:00:00" textFill="BLACK" />
+                <Label fx:id="Test_Target10_Name_Label" alignment="CENTER" font="$x6" layoutX="47.0" layoutY="12.0" prefWidth="114.0" text="老化组10" textFill="BLACK" />
+                <Button id="Test_Target10_Edit_Button" fx:id="Test_Target10_Button2" layoutX="104.0" layoutY="214.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="43.0" prefWidth="80.0" text="编辑组" />
+                <GridPane fx:id="Test_Group10_Pane" gridLinesVisible="true" hgap="1.0" layoutX="2.0" layoutY="136.0" prefWidth="196.0" vgap="1.0">
+                  <children>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group10_ImageView1" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group10_ImageView2" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group10_ImageView3" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group10_ImageView4" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="0">
+                      <children>
+                        <ImageView fx:id="Test_Group10_ImageView5" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group10_ImageView6" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group10_ImageView7" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group10_ImageView8" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group10_ImageView9" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                      <children>
+                        <ImageView fx:id="Test_Group10_ImageView10" fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@status_yellow.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </AnchorPane>
+                  </children>
+                  <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  </columnConstraints>
+                  <rowConstraints>
+                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+                </GridPane>
+                <ChoiceBox id="Test_Target1_LeaveReason_ChoiceBox" fx:id="Test_Target10_LeaveReason_ChoiceBox" layoutX="96.0" layoutY="166.0" prefHeight="28.999908447265625" prefWidth="84.0" visible="false">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="项 1" />
+                      <String fx:value="项 2" />
+                      <String fx:value="项 3" />
+                    </FXCollections>
+                  </items>
+                </ChoiceBox>
+                <Label id="Test_Target1_LeaveReason_Label" fx:id="Test_Target10_LeaveReason_Label" font="$x8" layoutX="14.0" layoutY="169.0" text="停止原因:" textFill="BLACK" visible="false" />
+                <Button id="Test_Target1_Start_Button" fx:id="Test_Target10_RunTime_Add_Button" layoutX="148.0" layoutY="54.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="32.0" prefWidth="32.0" text="+" />
+                <Button id="Test_Target1_Start_Button" fx:id="Test_Target10_RunTime_Sub_Button" layoutX="26.0" layoutY="54.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="32.0" prefWidth="32.0" text="-" />
+                <Button id="Test_Target1_Start_Button" fx:id="Test_Target10_TestRun_Button" layoutX="70.0" layoutY="122.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="35.0" prefWidth="64.0" text="启动" visible="false" />
+              </children>
+            </AnchorPane>
+          </children>
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+        </GridPane>
+      </children>
+    </AnchorPane>
+    <Label fx:id="System_Time" alignment="CENTER_RIGHT" contentDisplay="LEFT" layoutX="702.0" layoutY="46.0" prefWidth="307.0" text="----" textAlignment="RIGHT" textFill="$x4">
+      <font>
+        <Font name="STKaiti" size="20.0" fx:id="x1" />
+      </font>
+    </Label>
+    <Label fx:id="TestOpt_Name" alignment="CENTER_LEFT" contentDisplay="LEFT" layoutX="19.0" layoutY="40.0" prefWidth="209.0" text="操作员:----" textAlignment="RIGHT" textFill="$x4">
+      <font>
+        <Font name="STKaiti" size="24.0" />
+      </font>
+    </Label>
+    <AnchorPane layoutX="12.0" layoutY="622.0" prefHeight="178.0" prefWidth="996.0">
+      <children>
+        <TabPane id="" layoutX="0.0" layoutY="0.0" prefHeight="171.0" prefWidth="854.0" tabClosingPolicy="UNAVAILABLE">
+          <tabs>
+            <Tab id="T22" text="基本设置管理">
+              <content>
+                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                    <Rectangle id="Rectangle_Color_Yellow" arcHeight="10.0" arcWidth="10.0" fill="$x2" height="140.0" layoutX="0.0" layoutY="0.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="996.0">
+                      <effect>
+                        <Lighting>
+                          <bumpInput>
+                            <Shadow />
+                          </bumpInput>
+                          <light>
+                            <javafx.scene.effect.Light.Distant color="$x7" />
+                          </light>
+                        </Lighting>
+                      </effect>
+                    </Rectangle>
+                    <Rectangle arcHeight="10.0" arcWidth="10.0" height="113.0" layoutX="349.0" layoutY="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="430.0">
+                      <effect>
+                        <Lighting>
+                          <bumpInput>
+                            <Shadow />
+                          </bumpInput>
+                          <light>
+                            <javafx.scene.effect.Light.Distant color="#fff500" />
+                          </light>
+                        </Lighting>
+                      </effect>
+                      <fill>
+                        <Color blue="0.659" green="0.816" red="0.722" fx:id="x10" />
+                      </fill>
+                    </Rectangle>
+                    <Label layoutX="69.0" layoutY="61.0" text="定时单位切换:" textFill="BLACK">
+                      <font>
+                        <Font name="STZhongsong" size="16.0" fx:id="x9" />
+                      </font>
+                    </Label>
+                    <TextArea fx:id="Aodi_InfoPut_TextArea" editable="false" layoutX="349.0" layoutY="15.0" opacity="0.32" prefHeight="113.0" prefWidth="430.0" text="" />
+                    <Button id="Test_Target6_Start_Button" fx:id="Aodi_InfoClean_Button" layoutX="788.0" layoutY="86.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="40.0" prefWidth="57.0" text="清空" />
+                    <RadioButton fx:id="TimingSwitch_Hour_RadioButton" font="$x9" layoutX="176.0" layoutY="61.0" mnemonicParsing="false" onAction="#Button_Pro" selected="true" text="小时" />
+                    <RadioButton fx:id="TimingSwitch_Minute_RadioButton" font="$x9" layoutX="244.0" layoutY="61.0" mnemonicParsing="false" onAction="#Button_Pro" text="分钟" />
+                  </children>
+                </AnchorPane>
+              </content>
+            </Tab>
+            <Tab id="T11" disable="false" text="老化产品录入">
+              <content>
+                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="140.0" prefWidth="854.0">
+                  <children>
+                    <Rectangle id="Rectangle_Color_Green" arcHeight="10.0" arcWidth="10.0" fill="$x2" height="140.0" layoutX="0.0" layoutY="0.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="854.0">
+                      <effect>
+                        <Lighting>
+                          <bumpInput>
+                            <Shadow />
+                          </bumpInput>
+                          <light>
+                            <javafx.scene.effect.Light.Distant color="$x7" />
+                          </light>
+                        </Lighting>
+                      </effect>
+                    </Rectangle>
+                    <Label fx:id="Test_Tab1_Group_Name_Label" alignment="CENTER" font="$x8" layoutX="708.0" layoutY="15.0" text="----------" />
+                    <Label font="$x9" layoutX="14.0" layoutY="28.0" text="节点1:" textFill="BLACK" />
+                    <TextField fx:id="Test_Tab1_Node1_Name_TextField" alignment="CENTER" disable="false" editable="true" layoutX="64.0" layoutY="24.0" prefHeight="30.0" prefWidth="150.0" text="-----" visible="true" />
+                    <Button id="Test_Target6_Start_Button" fx:id="Test_Tab1_InputName_Button" layoutX="788.0" layoutY="8.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="40.0" prefWidth="57.0" text="录入" />
+                    <Label font="$x9" layoutX="14.0" layoutY="62.0" text="节点2:" textFill="BLACK" />
+                    <TextField fx:id="Test_Tab1_Node2_Name_TextField" alignment="CENTER" disable="false" editable="true" layoutX="64.0" layoutY="58.0" prefHeight="30.0" prefWidth="150.0" text="-----" />
+                    <Label font="$x9" layoutX="634.0" layoutY="96.0" text="节点10:" textFill="BLACK" />
+                    <TextField fx:id="Test_Tab1_Node10_Name_TextField" alignment="CENTER" disable="false" editable="true" layoutX="695.0" layoutY="92.0" prefHeight="30.0" prefWidth="150.0" text="-----" />
+                    <Label font="$x9" layoutX="14.0" layoutY="96.0" text="节点3:" textFill="BLACK" />
+                    <TextField fx:id="Test_Tab1_Node3_Name_TextField" alignment="CENTER" disable="false" editable="true" layoutX="64.0" layoutY="92.0" prefHeight="30.0" prefWidth="150.0" text="-----" />
+                    <Label font="$x9" layoutX="220.0" layoutY="28.0" text="节点4:" textFill="BLACK" />
+                    <TextField fx:id="Test_Tab1_Node4_Name_TextField" alignment="CENTER" disable="false" editable="true" layoutX="270.0" layoutY="24.0" prefHeight="30.0" prefWidth="150.0" text="-----" />
+                    <Label font="$x9" layoutX="220.0" layoutY="62.0" text="节点5:" textFill="BLACK" />
+                    <TextField fx:id="Test_Tab1_Node5_Name_TextField" alignment="CENTER" disable="false" editable="true" layoutX="270.0" layoutY="58.0" prefHeight="30.0" prefWidth="150.0" text="-----" />
+                    <Label font="$x9" layoutX="220.0" layoutY="96.0" text="节点6:" textFill="BLACK" />
+                    <TextField fx:id="Test_Tab1_Node6_Name_TextField" alignment="CENTER" disable="false" editable="true" layoutX="270.0" layoutY="92.0" prefHeight="30.0" prefWidth="150.0" text="-----" />
+                    <Label font="$x9" layoutX="427.0" layoutY="28.0" text="节点7:" textFill="BLACK" />
+                    <TextField fx:id="Test_Tab1_Node7_Name_TextField" alignment="CENTER" disable="false" editable="true" layoutX="477.0" layoutY="24.0" prefHeight="30.0" prefWidth="150.0" text="-----" />
+                    <Label font="$x9" layoutX="427.0" layoutY="62.0" text="节点8:" textFill="BLACK" />
+                    <TextField fx:id="Test_Tab1_Node8_Name_TextField" alignment="CENTER" disable="false" editable="true" layoutX="477.0" layoutY="58.0" prefHeight="30.0" prefWidth="150.0" text="-----" />
+                    <Label font="$x9" layoutX="427.0" layoutY="96.0" text="节点9:" textFill="BLACK" />
+                    <TextField fx:id="Test_Tab1_Node9_Name_TextField" alignment="CENTER" disable="false" editable="true" layoutX="477.0" layoutY="92.0" prefHeight="30.0" prefWidth="150.0" text="-----" />
+                    <ComboBox fx:id="Test_PudModel_Sel_ComboBox" layoutX="694.0" layoutY="58.0" prefHeight="30.0" prefWidth="150.0" promptText="">
+                      <items>
+                        <FXCollections fx:factory="observableArrayList">
+                          <String fx:value="项 1" />
+                          <String fx:value="项 2" />
+                          <String fx:value="项 3" />
+                        </FXCollections>
+                      </items>
+                    </ComboBox>
+                    <Label font="$x9" layoutX="653.0" layoutY="63.0" text="型号:" />
+                  </children>
+                </AnchorPane>
+              </content>
+            </Tab>
+            <Tab id="T22" text="数据采集模式配置">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                    <Rectangle arcHeight="10.0" arcWidth="10.0" fill="$x2" height="140.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="854.0">
+                      <effect>
+                        <Lighting>
+                          <bumpInput>
+                            <Shadow />
+                          </bumpInput>
+                          <light>
+                            <javafx.scene.effect.Light.Distant>
+                              <color>
+                                <Color blue="1.000" green="0.847" red="0.000" fx:id="x13" />
+                              </color>
+                            </javafx.scene.effect.Light.Distant>
+                          </light>
+                        </Lighting>
+                      </effect>
+                    </Rectangle>
+                    <ComboBox fx:id="Aodi_DataSample_Mode_ComboBox" layoutX="403.0" layoutY="55.0" onAction="#Button_Pro" prefHeight="30.0" prefWidth="154.0">
+                      <items>
+                        <FXCollections fx:factory="observableArrayList">
+                          <String fx:value="项 1" />
+                          <String fx:value="项 2" />
+                          <String fx:value="项 3" />
+                        </FXCollections>
+                      </items>
+                    </ComboBox>
+                    <Label font="$x9" layoutX="298.0" layoutY="60.0" text="采样模式选择:" textFill="BLACK" />
+                  </children>
+                </AnchorPane>
+              </content>
+            </Tab>
+            <Tab id="T11" text="预警处理配置">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                    <Rectangle arcHeight="10.0" arcWidth="10.0" fill="$x2" height="140.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="854.0">
+                      <effect>
+                        <Lighting>
+                          <bumpInput>
+                            <Shadow />
+                          </bumpInput>
+                          <light>
+                            <javafx.scene.effect.Light.Distant color="$x13" />
+                          </light>
+                        </Lighting>
+                      </effect>
+                    </Rectangle>
+                    <Label font="$x9" layoutX="259.0" layoutY="60.0" text="预警告警方式:" textFill="BLACK" />
+                    <ComboBox fx:id="Aodi_AlarmMode_ComboBox" layoutX="365.0" layoutY="55.0" onAction="#Button_Pro" prefHeight="30.0" prefWidth="231.0">
+                      <items>
+                        <FXCollections fx:factory="observableArrayList">
+                          <String fx:value="项 1" />
+                          <String fx:value="项 2" />
+                          <String fx:value="项 3" />
+                        </FXCollections>
+                      </items>
+                    </ComboBox>
+                  </children>
+                </AnchorPane>
+              </content>
+            </Tab>
+            <Tab id="T22" text="老化产品型号管理">
+              <content>
+                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                    <Rectangle id="Rectangle_Color_Red" arcHeight="10.0" arcWidth="10.0" fill="$x2" height="140.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="854.0">
+                      <effect>
+                        <Lighting>
+                          <bumpInput>
+                            <Shadow />
+                          </bumpInput>
+                          <light>
+                            <javafx.scene.effect.Light.Distant color="$x7" />
+                          </light>
+                        </Lighting>
+                      </effect>
+                    </Rectangle>
+                    <TextField id="" fx:id="Aodi_PudModel_VoltageLimit_TextField" alignment="CENTER" disable="true" editable="true" layoutX="129.0" layoutY="67.0" prefHeight="30.0" prefWidth="70.0" text="--" visible="true" />
+                    <Label font="$x9" layoutX="25.0" layoutY="104.0" text="电压监测幅值:" textFill="BLACK" />
+                    <TextField id="" fx:id="Aodi_PudModel_VoltageLimit_Range_TextField" alignment="CENTER" disable="true" editable="true" layoutX="129.0" layoutY="100.0" prefHeight="30.0" prefWidth="70.0" text="--" visible="true" />
+                    <Label font="$x9" layoutX="25.0" layoutY="74.0" text="电压监测值:" textFill="BLACK" />
+                    <TextField id="" fx:id="Aodi_PudModel_Temperature1Limit_TextField" alignment="CENTER" disable="true" layoutX="493.0" layoutY="67.0" prefHeight="30.0" prefWidth="50.0" text="--" visible="true" />
+                    <Label font="$x9" layoutX="410.0" layoutY="74.0" text="温度1限值:" textFill="BLACK" />
+                    <TextField id="" fx:id="Aodi_PudModel_Temperature2Limit_TextField" alignment="CENTER" disable="true" editable="true" layoutX="632.0" layoutY="67.0" prefHeight="30.0" prefWidth="50.0" text="--" visible="true" />
+                    <Label font="$x9" layoutX="549.0" layoutY="74.0" text="温度2限值:" textFill="BLACK" />
+                    <TextField id="" fx:id="Aodi_PudModel_Temperature3Limit_TextField" alignment="CENTER" disable="true" editable="true" layoutX="770.0" layoutY="67.0" prefHeight="30.0" prefWidth="50.0" text="--" visible="true" />
+                    <Label font="$x9" layoutX="687.0" layoutY="74.0" text="温度3限值:" textFill="BLACK" />
+                    <Line endX="720.0" endY="0.0" layoutX="115.0" layoutY="59.0" startX="-100.0" strokeWidth="2.0" />
+                    <Label font="$x9" layoutX="207.0" layoutY="74.0" text="电流监测值:" textFill="BLACK" />
+                    <TextField id="" fx:id="Aodi_PudModel_CurrentLimit_Range_TextField" alignment="CENTER" disable="true" editable="true" layoutX="311.0" layoutY="100.0" prefHeight="30.0" prefWidth="70.0" text="--" visible="true" />
+                    <Label font="$x9" layoutX="207.0" layoutY="104.0" text="电流监测幅值:" textFill="BLACK" />
+                    <TextField id="" fx:id="Aodi_PudModel_CurrentLimit_TextField" alignment="CENTER" disable="true" editable="true" layoutX="311.0" layoutY="67.0" prefHeight="30.0" prefWidth="70.0" text="--" visible="true" />
+                    <Label font="$x9" layoutX="687.0" layoutY="104.0" text="温度3幅值:" textFill="BLACK" />
+                    <TextField id="" fx:id="Aodi_PudModel_Temperature3Limit_Range_TextField" alignment="CENTER" disable="true" editable="true" layoutX="770.0" layoutY="100.0" prefHeight="30.0" prefWidth="50.0" text="--" visible="true" />
+                    <Label font="$x9" layoutX="549.0" layoutY="104.0" text="温度2幅值:" textFill="BLACK" />
+                    <TextField id="" fx:id="Aodi_PudModel_Temperature2Limit_Range_TextField" alignment="CENTER" disable="true" editable="true" layoutX="632.0" layoutY="99.0" prefHeight="30.0" prefWidth="50.0" text="--" visible="true" />
+                    <Label font="$x9" layoutX="410.0" layoutY="104.0" text="温度1幅值:" textFill="BLACK" />
+                    <TextField id="" fx:id="Aodi_PudModel_Temperature1Limit_Range_TextField" alignment="CENTER" disable="true" editable="true" layoutX="493.0" layoutY="100.0" prefHeight="30.0" prefWidth="50.0" text="--" visible="true" />
+                    <ComboBox fx:id="Aodi_PudModel_Sel_ComboBox" layoutX="559.0" layoutY="16.0" onAction="#Button_Pro" prefHeight="30.0" prefWidth="114.0">
+                      <items>
+                        <FXCollections fx:factory="observableArrayList">
+                          <String fx:value="项 1" />
+                          <String fx:value="项 2" />
+                          <String fx:value="项 3" />
+                        </FXCollections>
+                      </items>
+                    </ComboBox>
+                    <Label font="$x9" layoutX="517.0" layoutY="21.0" text="型号:" textFill="BLACK" />
+                    <Button id="Test_Target6_Start_Button" fx:id="Aodi_PudModel_Editor_Button" layoutX="689.0" layoutY="11.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="40.0" prefWidth="57.0" text="编辑" />
+                    <Button id="Test_Target6_Start_Button" fx:id="Aodi_PudModel_Save_Button" layoutX="760.0" layoutY="11.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="40.0" prefWidth="57.0" text="保存" />
+                    <Line endX="-100.0" endY="30.0" layoutX="580.0" layoutY="22.0" startX="-100.0" startY="-13.0" />
+                    <TextField id="Test_Tab1_Node1_Name_TextField" fx:id="Aodi_PudModel_New_TextField" alignment="CENTER" disable="false" editable="true" layoutX="157.0" layoutY="17.0" prefHeight="30.0" prefWidth="168.0" text="" visible="true" />
+                    <Label font="$x9" layoutX="83.0" layoutY="21.0" text="新型号名:" textFill="BLACK" />
+                    <Button id="Test_Target6_Start_Button" fx:id="Aodi_PudModel_New_Button" layoutX="339.0" layoutY="12.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="40.0" prefWidth="80.0" text="新建" />
+                  </children>
+                </AnchorPane>
+              </content>
+            </Tab>
+                  <Tab id="T11" text="老化故障应急处理">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Rectangle id="Rectangle_Color_Yellow" arcHeight="10.0" arcWidth="10.0" fill="$x2" height="140.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="854.0">
+                                 <effect>
+                                    <Lighting>
+                                       <bumpInput>
+                                          <Shadow />
+                                       </bumpInput>
+                                       <light>
+                                          <Light.Distant color="$x7" />
+                                       </light>
+                                    </Lighting>
+                                 </effect>
+                              </Rectangle>
+                              <Label font="$x9" layoutX="174.0" layoutY="58.0" text="故障组编号:" textFill="BLACK" />
+                              <ComboBox fx:id="Aodi_AlarmPro_Group_ComboBox" layoutX="262.0" layoutY="53.0" prefHeight="30.0" prefWidth="80.0">
+                                 <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                       <String fx:value="项 1" />
+                                       <String fx:value="项 2" />
+                                       <String fx:value="项 3" />
+                                    </FXCollections>
+                                 </items>
+                              </ComboBox>
+                              <ComboBox fx:id="Aodi_AlarmPro_Node_ComboBox" layoutX="478.0" layoutY="54.0" onAction="#Button_Pro" prefHeight="30.0" prefWidth="80.0">
+                                 <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                       <String fx:value="项 1" />
+                                       <String fx:value="项 2" />
+                                       <String fx:value="项 3" />
+                                    </FXCollections>
+                                 </items>
+                              </ComboBox>
+                              <Label font="$x9" layoutX="358.0" layoutY="59.0" text="故障组节点编号:" textFill="BLACK" />
+                              <Button id="Test_Target6_Start_Button" fx:id="Aodi_AlarmPro_Button" layoutX="581.0" layoutY="50.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="40.0" prefWidth="99.0" text="故障确认" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+          </tabs>
+        </TabPane>
+        <Rectangle id="Rectangle_Color_Yellow" arcHeight="10.0" arcWidth="10.0" fill="$x2" height="171.0" layoutX="857.0" layoutY="0.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="141.0">
+          <effect>
+            <Lighting>
+              <bumpInput>
+                <Shadow />
+              </bumpInput>
+              <light>
+                <javafx.scene.effect.Light.Distant color="$x7" />
+              </light>
+            </Lighting>
+          </effect>
+        </Rectangle>
+        <Label font="$x9" layoutX="874.0" layoutY="110.0" text="转换板状态:" textFill="BLACK" />
+        <ImageView id="Test_Group1_ImageView" fx:id="System_PCB_Status_ImageView" fitHeight="24.0" fitWidth="24.0" layoutX="960.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@../statusbar_message_light_orange.png" />
+          </image>
+        </ImageView>
+        <Label font="$x9" layoutX="874.0" layoutY="138.0" text="以网络状态:" textFill="BLACK" />
+        <ImageView id="Test_Group1_ImageView" fx:id="System_NetWork_Status_ImageView" fitHeight="24.0" fitWidth="24.0" layoutX="960.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@../statusbar_message_light_orange.png" />
+          </image>
+        </ImageView>
+        <Rectangle arcHeight="10.0" arcWidth="10.0" fill="$x10" height="93.0" layoutX="871.0" layoutY="9.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="114.0">
+          <effect>
+            <Lighting>
+              <bumpInput>
+                <Shadow />
+              </bumpInput>
+              <light>
+                <javafx.scene.effect.Light.Distant color="$x7" />
+              </light>
+            </Lighting>
+          </effect>
+        </Rectangle>
+        <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#f01702" height="29.0" layoutX="878.0" layoutY="19.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="99.0">
+          <effect>
+            <Lighting>
+              <bumpInput>
+                <Shadow />
+              </bumpInput>
+              <light>
+                <javafx.scene.effect.Light.Distant color="$x7" />
+              </light>
+            </Lighting>
+          </effect>
+        </Rectangle>
+      </children>
+    </AnchorPane>
+  </children>
+  <stylesheets>
+    <URL value="@AODI.css" />
+  </stylesheets>
+</AnchorPane>

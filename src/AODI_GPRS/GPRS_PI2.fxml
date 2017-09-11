@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="Root" minWidth="800.0" prefHeight="480.0" prefWidth="800.0" styleClass="background" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="AODI_GPRS.GPRSController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <Label layoutX="270.0" layoutY="12.0" prefWidth="261.0" text="奥蒂电控GPRS测试">
+      <font>
+        <Font name="STKaiti" size="30.0" />
+      </font>
+      <textFill>
+        <Color blue="0.749" green="0.749" red="0.749" fx:id="x4" />
+      </textFill>
+    </Label>
+    <ImageView fx:id="App_Exit" fitHeight="32.0" fitWidth="32.0" layoutX="761.0" layoutY="7.0" onMouseClicked="#AppExit_Pro" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@error.png" />
+      </image>
+    </ImageView>
+    <AnchorPane layoutX="8.0" layoutY="89.0" minHeight="110.0" minWidth="786.0" prefHeight="110.0" prefWidth="786.0">
+      <children>
+        <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1e90ffb4" height="108.0" layoutX="0.0" layoutY="0.0" opacity="0.65" stroke="BLACK" strokeType="OUTSIDE" width="785.0">
+          <effect>
+            <DropShadow blurType="ONE_PASS_BOX" color="GREY" height="55.269841269841265" radius="27.134920634920633" spread="0.07936507936507936" width="55.269841269841265" />
+          </effect>
+        </Rectangle>
+        <Label layoutX="251.0" layoutY="19.0" prefWidth="125.0" text="服务器端口号:" textFill="$x4">
+          <font>
+            <Font name="STKaiti" size="20.0" fx:id="x1" />
+          </font>
+        </Label>
+        <TextField id="T22" fx:id="TextField_ServePort" alignment="CENTER" editable="true" layoutX="379.0" layoutY="19.0" prefHeight="30.0" prefWidth="75.0" text="40000" />
+        <Label font="$x1" layoutX="14.0" layoutY="20.0" prefWidth="88.0" text="服务器IP:" textFill="$x4" />
+        <TextField id="T22" fx:id="TextField_ServeIP" alignment="CENTER" editable="true" layoutX="102.0" layoutY="19.0" prefHeight="30.0" prefWidth="144.0" text="122.114.114.58" />
+        <Label font="$x1" layoutX="14.0" layoutY="65.0" prefWidth="88.0" text="DeviceID:" textFill="$x4" />
+        <TextField id="T33" fx:id="TextField_DeviceID" alignment="CENTER" editable="true" layoutX="102.0" layoutY="65.0" prefHeight="30.0" prefWidth="193.0" text="33ffdd05474b363817531843" />
+        <Label font="$x1" layoutX="307.0" layoutY="65.0" prefWidth="104.0" text="CarNumber:" textFill="$x4" />
+        <TextField id="T33" fx:id="TextField_CarNumber" alignment="CENTER" editable="true" layoutX="411.0" layoutY="65.0" prefHeight="30.0" prefWidth="104.0" text="京L12345" />
+        <Label font="$x1" layoutX="532.0" layoutY="67.0" prefWidth="49.0" text="Pwd:" textFill="$x4" />
+        <TextField id="T33" fx:id="TextField_Pwd" alignment="CENTER" editable="true" layoutX="574.0" layoutY="65.0" prefHeight="30.0" prefWidth="75.0" text="123456" />
+        <Button id="Button_Load" fx:id="Button_Connect" layoutX="664.0" layoutY="15.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="40.0" prefWidth="116.0" text="TCP连接" />
+        <ImageView fx:id="ImageView_TcpConnect" fitHeight="32.0" fitWidth="32.0" layoutX="664.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@status_red.png" />
+          </image>
+        </ImageView>
+        <Button id="Button_Load" fx:id="Button_CleanText" layoutX="664.0" layoutY="61.0" mnemonicParsing="false" onAction="#Button_Pro" prefHeight="40.0" prefWidth="116.0" text="接收清空" />
+        <Label font="$x1" layoutX="462.0" layoutY="20.0" prefWidth="125.0" text="TCP接收计数:" textFill="$x4" />
+        <TextField id="T44" fx:id="TextField_TcpCount" alignment="CENTER" editable="true" layoutX="587.0" layoutY="19.0" prefHeight="30.0" prefWidth="62.0" text="0" />
+      </children>
+    </AnchorPane>
+    <AnchorPane layoutX="8.0" layoutY="211.0" minHeight="197.0" minWidth="760.0" prefHeight="255.0" prefWidth="786.0">
+      <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#72ff66" height="255.0" layoutX="0.0" layoutY="0.0" stroke="BLACK" strokeType="INSIDE" width="787.0" />
+        <TextArea id="" fx:id="TextAre_RecText" layoutX="0.0" layoutY="0.0" opacity="0.58" prefHeight="255.0" prefWidth="786.0" text="" wrapText="true" />
+      </children>
+    </AnchorPane>
+    <Label fx:id="Label_Time" alignment="CENTER" font="$x1" layoutX="557.0" layoutY="52.0" prefWidth="231.0" text="----" textFill="$x4" />
+  </children>
+  <stylesheets>
+    <URL value="@Servo.css" />
+  </stylesheets>
+</AnchorPane>
